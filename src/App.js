@@ -1,6 +1,6 @@
 
 import './App.css';
-import {Navbar} from './components/navbar'
+import {Navbar} from './components/navbar/navbar'
 import {logo} from '../img logo.png';
 console.log(logo)
 
