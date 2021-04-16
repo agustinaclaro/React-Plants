@@ -1,7 +1,7 @@
 
 import './App.scss';
 import {Navbar} from './components/navbar/navbar'
-import {Productos} from './components/products/products'
+import {Products} from './components/products/products'
 
 
 function App() {
@@ -75,7 +75,7 @@ function App() {
 
     <div className="App">
       <Navbar/>
-      <Productos/>
+      <Products/>
     </div>
   );
 }
