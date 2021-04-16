@@ -1,4 +1,4 @@
-
+import {logo} from '../../logo.svg'
 
 export const Navbar = () => {
     return (
