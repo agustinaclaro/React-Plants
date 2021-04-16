@@ -1,4 +1,4 @@
-import '.products.scss'
+import './products.scss'
 
 export const Products = ()=> (
     <div>

@@ -1,5 +1,5 @@
 
-import './App.css';
+import './App.scss';
 import {Navbar} from './components/navbar/navbar'
 import {Productos} from './components/products/products'
 
