@@ -1,6 +1,7 @@
 
 import './App.css';
 import {Navbar} from './components/navbar/navbar'
+import {Productos} from './components/products/products'
 
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
 
     <div className="App">
       <Navbar/>
+      <Productos/>
     </div>
   );
 }
