@@ -1,4 +1,5 @@
 import logo from '../../logo.png'
+import './navbar.js'
 
 export const Navbar = () => {
     return (
