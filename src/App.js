@@ -7,67 +7,67 @@ import {Products} from './components/products/products'
 function App() {
   const Productos =[
     {
-      titulo : "Drasena",
-      precio: "$1200",
+      title : "Drasena",
+      price: "$1200",
 
     },
 
     {
-      titulo : "Drasena0",
-      precio: "$1200",
+      title : "Drasena0",
+      price: "$1200",
       
     },
 
     {
-      titulo : "Drasena1",
-      precio: "$1200",
+      title : "Drasena1",
+      price: "$1200",
       
     }
     ,
     {
-      titulo : "Drasena2",
-      precio: "$1200",
+      title : "Drasena2",
+      price: "$1200",
       
     },
 
     {
-      titulo : "Drasena3",
-      precio: "$1200",
+      title : "Drasena3",
+      price: "$1200",
       
     },
     {
-      titulo : "Drasena4",
-      precio: "$1200",
+      title : "Drasena4",
+      price: "$1200",
       
     },
     {
-      titulo : "Drasena5",
-      precio: "$1200",
+      title : "Drasena5",
+      price: "$1200",
       
     },
     {
-      titulo : "Drasena6",
-      precio: "$1200",
+      title: "Drasena6",
+      price: "$1200",
       
     },
     {
-      titulo : "Drasena7",
-      precio: "$1200",
+      title : "Drasena7",
+      price: "$1200",
       
     },
     {
-      titulo : "Drasena8",
-      precio: "$1200",
+      title : "Drasena8",
+      price: "$1200",
       
     },
     {
-      titulo : "Drasena9",
-      precio: "$1200",
+      title : "Drasena9",
+      price: "$1200",
       
     },
     {
-      titulo : "Drasena10",
-      precio: "$1200",
+      title : "Drasena10",
+      price: "$1200",
       
     }
   ]
@@ -75,7 +75,10 @@ function App() {
 
     <div className="App">
       <Navbar/>
-      <Products/>
+      <Products
+      title= {Productos.title[0].title}
+      price= {Productos.title[0.].price}
+      />
     </div>
   );
 }

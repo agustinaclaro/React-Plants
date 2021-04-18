@@ -1,8 +1,12 @@
 import './products.scss'
 
-export const Products = ()=> (
-    <div>
-        <h2>titulo</h2>
-        <p>precio</p>
+export const Products = (props)=> (
+    const productClick = ()=> (
+        alert( `compra ${props.title} que es tu planta ideal` ) )
+    return(
+    <div onClick ={ productClick}>
+        <h2>{props.title}</h2>
+        <p>{props.price}</p>
     </div>
+)
 )
