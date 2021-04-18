@@ -77,7 +77,7 @@ function App() {
       <Navbar/>
       <Products
       title= {Productos.title[0].title}
-      price= {Productos.title[0.].price}
+      price= {Productos.title[0].price}
       />
     </div>
   );
