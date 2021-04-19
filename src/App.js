@@ -5,7 +5,7 @@ import {Products} from './components/products/products'
 
 
 function App() {
-  const Productos =[
+  const products =[
     {
       title : "Drasena",
       price: "$1200",
@@ -75,10 +75,12 @@ function App() {
 
     <div className="App">
       <Navbar/>
+      {Productos.map ((products)=>
       <Products
-      title= {Productos.title[0].title}
-      price= {Productos.title[0].price}
+      title= {product.title}
+      price= {product.price}
       />
+      )}
     </div>
   );
 }
