@@ -1,7 +1,7 @@
 
 import './App.scss';
 import {Navbar} from './components/navbar/navbar'
-import {Products} from './components/products/products'
+import {Product} from './components/products/products'
 
 
 function App() {
@@ -9,64 +9,64 @@ function App() {
     {
       title : "Drasena",
       price: "$1200",
-
+    
     },
 
     {
-      title : "Drasena0",
+      title : "Amapola",
       price: "$1200",
       
     },
 
     {
-      title : "Drasena1",
+      title : "Aleli",
       price: "$1200",
       
     }
     ,
     {
-      title : "Drasena2",
+      title : "Jazmin",
       price: "$1200",
       
     },
 
     {
-      title : "Drasena3",
+      title : "Cactus",
       price: "$1200",
       
     },
     {
-      title : "Drasena4",
+      title : "Potus",
       price: "$1200",
       
     },
     {
-      title : "Drasena5",
+      title : "Rosa",
       price: "$1200",
       
     },
     {
-      title: "Drasena6",
+      title: "Estrella Federal",
       price: "$1200",
       
     },
     {
-      title : "Drasena7",
+      title : "Croto",
       price: "$1200",
       
     },
     {
-      title : "Drasena8",
+      title : "Melisa",
       price: "$1200",
       
     },
     {
-      title : "Drasena9",
+      title : "Penca",
       price: "$1200",
       
     },
     {
-      title : "Drasena10",
+      title : "Look",
       price: "$1200",
       
     }
@@ -75,12 +75,12 @@ function App() {
 
     <div className="App">
       <Navbar/>
-      {Productos.map ((products)=>
-      <Products
+      {products.map ((product )=> (
+      <Product
       title= {product.title}
       price= {product.price}
       />
-      )}
+      ))}
     </div>
   );
 }

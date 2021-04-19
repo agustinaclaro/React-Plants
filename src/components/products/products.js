@@ -2,7 +2,7 @@ import './products.scss'
 
 export const Product = (props)=>{
     const productClicked = () =>
-    alert(`Buena eleccion ${pops.title}`) 
+    alert(`Buena eleccion ${props.title}`) 
     return(
     <div onClick = {productClicked}>
         <h2>{props.title}</h2>
