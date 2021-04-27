@@ -1,8 +1,8 @@
 
 import './App.scss';
-import {Navbar} from './components/navbar/navbar'
-import {Cards} from './components/products-card/products'
-import {List} from './components/list-product/list'
+import {Navbar} from './components/navbar/navbar.js.';
+import {Cards} from './components/products-card/products';
+import {List} from './components/list-product/list';
 
 
 function App() {
