@@ -1,8 +1,8 @@
 
 import './App.scss';
-import {Navbar} from './components/navbar/navbar.js.';
-import {Cards} from './components/products-card/products';
-import {List} from './components/list-product/list';
+import {Navbar} from './components/navbar/navbar.js';
+import {List} from './components/list/list';
+import {Wrapper} from './components/wrapper/wrapper'
 
 
 function App() {
@@ -96,7 +96,9 @@ function App() {
 
     <div className="App">
       <Navbar/>
-      <List products={Cards}/>
+      <Wrapper>
+      <List products={products}/>
+      </Wrapper>
     </div>
       );
 }

@@ -1,6 +1,5 @@
 import './products.scss';
 
-
 export const Cards= (props) => {
     const addToCartText = 'Añadir al carrito';
     return(
