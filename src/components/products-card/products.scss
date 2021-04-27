@@ -1,14 +1,26 @@
 .card-group{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
 .card-img-top{
         max-width: 250px;}
 .card{
-margin: 20px;
-border: solid black;
-width: 10rem;
-justify-content: space-around;
-
+    margin: 20px;
+    border : solid black;
+    width: 16rem;
+    justify-content: space-around;
+.card-body{
+    text-align: center;
+    align-items: center;
+}
+.card-title{
+    margin: 1rem;
+    font-size: 2rem;
+    }
+    .card-text{
+        margin: 0.5rem;
+        font-size: 1.5rem;
+    }
 }
 }
 

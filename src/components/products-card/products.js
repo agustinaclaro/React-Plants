@@ -1,8 +1,9 @@
 import './products.scss'
 
-export const Card= (props) => {
+
+export const Cards= (props) => {
     const addToCartText = 'Añadir al carrito';
-    return (
+    return(
         <div className="card-group">
             <div id={props.id} className="card">
                 <img src={props.imgUrl} className="card-img-top" alt="..."/>
@@ -13,6 +14,7 @@ export const Card= (props) => {
                 </div>
             </div>
         </div>
-        );
-}
+        )
+    };
+
 

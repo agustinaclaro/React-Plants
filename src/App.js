@@ -1,7 +1,8 @@
 
 import './App.scss';
 import {Navbar} from './components/navbar/navbar'
-import {Card} from './components/products/products'
+import {Cards} from './components/products-card/products'
+import {List} from './components/list-product/list'
 
 
 function App() {
@@ -95,15 +96,9 @@ function App() {
 
     <div className="App">
       <Navbar/>
-      {products.map ((product)=> (
-      <Card
-      title= {product.title}
-      price= {product.price}
-      imgUrl ={product.imgUrl}
-      />
-      ))}
+      <List products={Cards}/>
     </div>
-  );
+      );
 }
 
 export default App;
