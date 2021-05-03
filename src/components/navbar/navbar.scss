@@ -7,13 +7,13 @@
     color: #91c788;
     box-sizing: border-box;
 }
-.top-title {
-    text-align: center;
-}
+
 .ul-links {
     display: flex;
     list-style-type: none;
     float: right;
+    text-align: center;
+    padding-top: 1rem;
 }
 
 .item-link a {
