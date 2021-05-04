@@ -1,6 +1,9 @@
+
+
+
 export const Inicio = ()=> (
     
     <div className = "inicio- top">
-        <image scr="../" />
+        <img src={"../../"} />
     </div>
 )

@@ -11,7 +11,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom"
-import { Inicio } from './components/inicio/inicio';
+import { Inicio } from './components/Inicio/Inicio';
 
 
 
