@@ -11,6 +11,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom"
+import { Inicio } from './components/inicio/inicio';
 
 
 
@@ -23,7 +24,7 @@ function App() {
     console.log(searchValue);
   };
 
-  //<input type='text' placeholder='buscar' value={filter} onChange={(e) => search(e.target.value)} />
+ //<input type='text' placeholder='buscar' value={filter} onChange={(e) => search(e.target.value)} />
 
   return (
     <div className="App">
@@ -37,6 +38,9 @@ function App() {
             <ProductsList products={filteredProducts} />
           </Route>
           <Route path="/">
+            <Inicio/>
+              
+            
             <Redirect to="/products" />
           </Route>
         </Switch>

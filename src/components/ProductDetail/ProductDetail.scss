@@ -1,15 +1,18 @@
 .btn-productDetail{
-    margin: 2rem;
-    .btn-increment{
+    margin: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;;
+    display: inline-block;
+    align-items: center;
+    .btn-addProduct{
         width: 2rem;
+        height: 2rem;
         background-color: green;
         color:white;
         border-radius: 0.5rem;
     }
-    .btn-decrement{
-        width: 2rem;
-        background-color: green;
-        color:white;
-        border-radius: 0.5rem;
+    .btn-text{
+        width: 4rem;
+        height: 2rem;
     }
 }

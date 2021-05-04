@@ -1,7 +1,7 @@
+import './ProductDetail.scss'
 import { useState } from 'react';
 import { useParams } from "react-router-dom"
 import { getProductById } from '../../services/products';
-import './productDetail.scss'
 
 
 const ProductDetail = (props) => {
@@ -15,9 +15,9 @@ const ProductDetail = (props) => {
                 <p className="card-text">{productData.price}</p>
             </div>
             <div className="btn-productDetail">
-                <input type="button" value="-" className="btn-increment"/>
+                <input type="button" value="-" className="btn-addProduct increment"/>
                 <input type="text" placeholder="1" className="btn-text"></input>
-                <input type="button" value="+" className="btn-decrement"/>
+                <input type="button" value="+" className="btn-addProduct decrement"/>
             </div>
         </div>
     )
