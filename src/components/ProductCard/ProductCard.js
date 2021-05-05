@@ -1,18 +1,10 @@
-import { useState} from 'react';
+
 import './products.scss';
 
 
-const ProductCard = (props) => {
-    const [addToCartText, setAddtoCartText] = useState('AÑADIR');   
-     function changeBtnColor() {
-        if(addToCartText == 'AÑADIR'){
-            setAddtoCartText('REMOVE')
-        document.getElementsByClassName('btn-card').style.backgroundColor = "red";
-    } else {  
-        setAddtoCartText('AÑADIR')
-        document.getElementsByClassName('btn-card').style.backgroundColor ="#1ca704";
-    }
-}
+const ProductCard = (props) => { 
+    let addToCartText= "AÑADIR"
+
   
     return (
         <div id={props.id} className="card">
@@ -20,12 +12,14 @@ const ProductCard = (props) => {
             <div className="card-body">
                 <h5 className="card-title">{props.title}</h5>
                 <p className="card-text">{props.price}</p>
-                <button
+                <input
+                    type="button"
+                    id={e.id}
                     className="btn-card"
-                    value={addToCartText}
-                    onClick={changeBtnColor}
-                >   
-                </button>
+                    value={cardText,addToCartText}
+                    onClick={e=>changeBtnColor(e)}
+                />   
+                
             </div>
         </div>
     )
