@@ -13,7 +13,7 @@ import {
 } from "react-router-dom"
 import  Inicio  from './components/Inicio/Inicio';
 import TitleProcutDetail from './components/TitleProductDetail/TitleProductDetail';
-import TitleFont from './components/TitleFront/Ttlefront';
+import TitleFont from './components/TitleFront/TitleFront';
 
 
 
