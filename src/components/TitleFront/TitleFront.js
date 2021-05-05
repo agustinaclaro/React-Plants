@@ -1,4 +1,4 @@
-import './Titlefront.scss'
+import './TitleFront.scss'
 
 const TitleFont =() =>{
     return(
