@@ -2,12 +2,13 @@ import './ProductDetail.scss'
 import { useState } from 'react';
 import { useParams } from "react-router-dom"
 import { getProductById } from '../../services/products';
-
+import TitleProcutDetail, {TitleProductDetail } from '../TitleProductDetail/TitleProductDetail'
 
 const ProductDetail = (props) => {
     const { id } = useParams();
     const productData = getProductById(id);
     return (
+        <TitleProcutDetail>
         <div id={productData.id} className="card">
             <img src={productData.imgUrl} className="card-img-top" alt="..." />
             <div className="card-body">
@@ -20,6 +21,7 @@ const ProductDetail = (props) => {
                 <input type="button" value="+" className="btn-addProduct decrement"/>
             </div>
         </div>
+        </TitleProcutDetail>
     )
 };
 
