@@ -14,10 +14,9 @@ const ProductCard = (props) => {
                 <p className="card-text">{props.price}</p>
                 <input
                     type="button"
-                    id={e.id}
                     className="btn-card"
-                    value={cardText,addToCartText}
-                    onClick={e=>changeBtnColor(e)}
+                    value={addToCartText}
+    
                 />   
                 
             </div>
