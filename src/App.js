@@ -1,86 +1,52 @@
 
 import './App.scss';
-import {Navbar} from './components/navbar/navbar'
-import {Product} from './components/products/products'
+import Navbar from './components/navbar/navbar';
+import ProductsList from './components/ProductsList/ProductsList';
+import ProductDetail from './components/ProductDetail/ProductDetail'
+import { useEffect, useState } from 'react';
+import { getProducts } from './services/products';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom"
+import  Inicio  from './components/Inicio/Inicio';
+import TitleProcutDetail from './components/TitleProductDetail/TitleProductDetail';
+import TitleFont from './components/TitleFront/TitleFront';
+
 
 
 function App() {
-  const products =[
-    {
-      title : "Drasena",
-      price: "$1200",
-    
-    },
+  const products = getProducts();
+  const [filter, setFilter] = useState('')
+  const [filteredProducts, setFilteredProducts] = useState(products)
 
-    {
-      title : "Amapola",
-      price: "$1200",
-      
-    },
+  const search = (searchValue) => {
+    console.log(searchValue);
+  };
 
-    {
-      title : "Aleli",
-      price: "$1200",
-      
-    }
-    ,
-    {
-      title : "Jazmin",
-      price: "$1200",
-      
-    },
+ <input type='text' placeholder='buscar' value={filter} onChange={(e) => search(e.target.value)} />
 
-    {
-      title : "Cactus",
-      price: "$1200",
-      
-    },
-    {
-      title : "Potus",
-      price: "$1200",
-      
-    },
-    {
-      title : "Rosa",
-      price: "$1200",
-      
-    },
-    {
-      title: "Estrella Federal",
-      price: "$1200",
-      
-    },
-    {
-      title : "Croto",
-      price: "$1200",
-      
-    },
-    {
-      title : "Melisa",
-      price: "$1200",
-      
-    },
-    {
-      title : "Penca",
-      price: "$1200",
-      
-    },
-    {
-      title : "Look",
-      price: "$1200",
-      
-    }
-  ]
   return (
-
     <div className="App">
-      <Navbar/>
-      {products.map ((product )=> (
-      <Product
-      title= {product.title}
-      price= {product.price}
-      />
-      ))}
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/products/:id">
+          <TitleProcutDetail/>
+            <ProductDetail />
+          </Route>
+          <Route path="/products">
+            <TitleFont/>
+            <ProductsList products={filteredProducts} />
+          </Route>
+          <Route path="/">
+            <Inicio/>
+            <Redirect to="/products" />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
