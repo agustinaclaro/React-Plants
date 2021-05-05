@@ -1,9 +1,11 @@
+import './Inicio.scss'
 
 
-
-export const Inicio = ()=> (
+ const Inicio = ()=> (
     
     <div className = "inicio- top">
-        <img src={"../../"} />
+        <img src={`${process. env. PUBLIC_URL}/img/planta0`} />
+        console.log(planta0)
     </div>
 )
+export default Inicio;
