@@ -12,6 +12,8 @@ import {
   Redirect,
 } from "react-router-dom"
 import  Inicio  from './components/Inicio/Inicio';
+import TitleProcutDetail from './components/TitleProductDetail/TitleProductDetail';
+import TitleFont from './components/TitleFront/Ttlefront';
 
 
 
@@ -24,7 +26,7 @@ function App() {
     console.log(searchValue);
   };
 
- //<input type='text' placeholder='buscar' value={filter} onChange={(e) => search(e.target.value)} />
+ <input type='text' placeholder='buscar' value={filter} onChange={(e) => search(e.target.value)} />
 
   return (
     <div className="App">
@@ -32,15 +34,15 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/products/:id">
+          <TitleProcutDetail/>
             <ProductDetail />
           </Route>
           <Route path="/products">
+            <TitleFont/>
             <ProductsList products={filteredProducts} />
           </Route>
           <Route path="/">
             <Inicio/>
-              
-            
             <Redirect to="/products" />
           </Route>
         </Switch>

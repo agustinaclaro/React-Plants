@@ -8,7 +8,7 @@ const ProductDetail = (props) => {
     const { id } = useParams();
     const productData = getProductById(id);
     return (
-        <TitleProcutDetail>
+     
         <div id={productData.id} className="card">
             <img src={productData.imgUrl} className="card-img-top" alt="..." />
             <div className="card-body">
@@ -21,7 +21,6 @@ const ProductDetail = (props) => {
                 <input type="button" value="+" className="btn-addProduct decrement"/>
             </div>
         </div>
-        </TitleProcutDetail>
     )
 };
 
