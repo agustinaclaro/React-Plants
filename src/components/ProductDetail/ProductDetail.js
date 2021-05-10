@@ -9,7 +9,7 @@ const ProductDetail = (props) => {
     const productData = getProductById(id);
     return (
         <div id={productData.id} className="card">
-            <img src={productData.imgUrl} className="card-img-top" alt="..." />
+            <img src={productData.imgUrl} className="card-img-top" alt="..."  />
             <div className="card-body">
                 <h5 className="card-title">{productData.title}</h5>
                 <p className="card-text">{productData.price}</p>

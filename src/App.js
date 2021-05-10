@@ -1,7 +1,7 @@
 
 import './App.scss';
 import Navbar from './components/navbar/navbar';
-import ProductsList from './components/ProductsList/ProductsList';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ProductDetail from './components/ProductDetail/ProductDetail'
 import { useEffect, useState } from 'react';
 import { getProducts } from './services/products';
@@ -39,7 +39,7 @@ function App() {
           </Route>
           <Route path="/products">
             <TitleFont/>
-            <ProductsList products={filteredProducts} />
+            <ItemListContainer products={filteredProducts} />
           </Route>
           <Route path="/">
             <Inicio/>
