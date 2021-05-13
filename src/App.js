@@ -42,8 +42,10 @@ function App() {
             <ItemListContainer products={filteredProducts} />
           </Route>
           <Route path="/">
-            <Inicio/>
             <Redirect to="/products" />
+          </Route>
+          <Route path="/inicio">
+            <Inicio/>
           </Route>
         </Switch>
       </Router>

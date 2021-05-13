@@ -20,4 +20,4 @@ const ItemListContainer = ({ products }) => {
     );
 };
 
-export default ProductsList;
+export default ItemListContainer;
