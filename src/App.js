@@ -17,6 +17,7 @@ import TitleFont from './components/TitleFront/TitleFront';
 
 
 
+
 function App() {
   const products = getProducts();
   const [filter, setFilter] = useState('')
@@ -44,8 +45,8 @@ function App() {
           <Route path="/">
             <Redirect to="/products" />
           </Route>
-          <Route path="/inicio">
-            <Inicio/>
+          <Route path="/Inicio">
+            <Inicio component={Inicio}/>
           </Route>
         </Switch>
       </Router>

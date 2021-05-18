@@ -1,18 +1,60 @@
-.btn-productDetail{
+.card-pd {
+    display: flex;
+    .card-img-top-pd {
+        justify-content: flex-end;
+        max-width: 40rem;
+        height: auto;
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+}
+
+.card-pd-tx {
+    display: flex;
+    background-color: #91c788;
+    margin-left: 1rem;
+}
+.card-body-pd {
+    .card-title-pd {
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 100;
+        color: #feffde;
+        line-height: normal
+    }
+    .card-text-pd {
+        margin-top: 1rem;
+        padding: 1rem 3rem;
+        font-weight: 200;
+        color: #feffde;
+    }
+    .card-price-pd {
+        text-align: center;
+    }
+    .card-text-add {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+.btn-productDetail {
     margin: 1rem;
     padding-left: 2rem;
-    padding-right: 2rem;;
-    display: inline-block;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    .btn-addProduct{
+    justify-content: center;
+    .btn-addProduct {
         width: 3rem;
         height: 1.5rem;
         background-color: #52734d;
-        color:white;
+        color: white;
         border-radius: 0.3rem;
         border: none;
+        justify-content: center;
     }
-    .btn-text{
+    .btn-text {
         width: 3rem;
         height: 2rem;
         border-radius: 0.3rem;
@@ -21,8 +63,7 @@
         font-weight: 600;
         border: none;
         margin: 0.2rem;
+        
+        justify-content: center;
     }
-}
-.cardtop{
-    width: 50rem;
 }
