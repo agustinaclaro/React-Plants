@@ -19,7 +19,7 @@ const ProductDetail = (props) => {
                     <h5 className="card-title-pd">{productData.title}</h5>
                     <p className="card-text-pd">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente iste iure deserunt accusamus bland iste iure deserunt accusamus blanditiis a provident dolorem fugiat laborum ipsum modi amet, quod suscipit veniam. !</p>
                     <p className="card-price-pd">precio :{productData.price}</p>
-                    < ItemCounterstock {productData.stock} initial={1} onAdd={onAdd} />
+                    < ItemCounter stock={productData.stock} initial={1} onAdd={onAdd} />
                 </div>
 
             </div>
