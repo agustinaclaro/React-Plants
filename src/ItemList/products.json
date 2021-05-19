@@ -1,6 +1,6 @@
 [
     {
-        "title": "Drasena",
+        "title": "Bambusa",
         "price": "$1200",
         "imgUrl": "../img/plantas1-0.jpg",
         "id": "palnta0",
@@ -15,21 +15,21 @@
         "stock": "5"
     },
     {
-        "title": "Aleli",
+        "title": "Ficus",
         "price": "$1200",
         "imgUrl": "../img/plantas1-2.jpg",
         "id": "palnta2",
         "stock": "5"
     },
     {
-        "title": "Jazmin",
+        "title": "Cactus",
         "price": "$1200",
         "imgUrl": "../img/plantas1-3.jpg",
         "id": "palnta3",
         "stock": "5"
     },
     {
-        "title": "Cactus",
+        "title": "Nopal",
         "price": "$1200",
         "imgUrl": "../img/plantas1-4.jpg",
         "id": "palnta4",
@@ -43,14 +43,14 @@
         "stock": "5"
     },
     {
-        "title": "Rosa",
+        "title": "Suculenta",
         "price": "$1200",
         "imgUrl": "../img/plantas1-6.jpg",
         "id": "palnta6",
         "stock": "5"
     },
     {
-        "title": "Estrella Federal",
+        "title": "Drasena",
         "price": "$1200",
         "imgUrl": "../img/plantas1-7.jpg",
         "id": "palnta7",
@@ -74,7 +74,7 @@
         "title": "Penca",
         "price": "$1200",
         "imgUrl": "../img/plantas1-10.jpg",
-        "id": "palnta10",
+        "id": "Aloe Vera",
         "stock": "5"
     },
     {

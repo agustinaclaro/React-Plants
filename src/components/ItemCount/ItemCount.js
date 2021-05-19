@@ -23,8 +23,7 @@ const ItemCounter =({stock,initial,onAdd})=>{
                 </div>
                 <div className="btn-productDetail">
                         <input type="button" value="-" className="btn-addProduct increment" onClick={decrement}/>
-                        <span className="numberCount" >{count}</span>
-                        <input type="text" placeholder="1" className="btn-text"></input>
+                        <span className="btn-text numberCount" >{count}</span>
                         <input type="button" value="+" className="btn-addProduct decrement" onClick={increment}/>
                     </div>
 

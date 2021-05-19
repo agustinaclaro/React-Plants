@@ -9,7 +9,7 @@ const ProductDetail = (props) => {
     const { id } = useParams();
     const productData = getProductById(id);
     const onAdd =(count)=>{
-        alert(`Agrego al carrito ${count}`)
+        alert(`Agrego al carrito ${count} ${productData.title}`)
     }
     return (
 
