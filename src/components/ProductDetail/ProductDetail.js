@@ -3,11 +3,14 @@ import { useState } from 'react';
 import { useParams } from "react-router-dom"
 import { getProductById } from '../../services/products';
 import TitleProcutDetail, { TitleProductDetail } from '../TitleProductDetail/TitleProductDetail'
-import Itemcounter from '../ItemCounter/Itemcounter.js'
+import ItemCounter from '../ItemCount/ItemCount.js'
 
 const ProductDetail = (props) => {
     const { id } = useParams();
     const productData = getProductById(id);
+    const onAdd =(count)=>{
+        alert(`Agrego al carrito ${count}`)
+    }
     return (
 
         <div id={productData.id} className="card-pd">
@@ -15,9 +18,8 @@ const ProductDetail = (props) => {
                 <div className="card-body-pd">
                     <h5 className="card-title-pd">{productData.title}</h5>
                     <p className="card-text-pd">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente iste iure deserunt accusamus bland iste iure deserunt accusamus blanditiis a provident dolorem fugiat laborum ipsum modi amet, quod suscipit veniam. !</p>
-                    <p className="card-text-add">Agregar a carrito</p>
-                    <p className="card-price-pd">{productData.price}</p>
-                    <Itemcounter/>
+                    <p className="card-price-pd">precio :{productData.price}</p>
+                    < ItemCounterstock {productData.stock} initial={1} onAdd={onAdd} />
                 </div>
 
             </div>

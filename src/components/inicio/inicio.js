@@ -1,4 +1,5 @@
 import './Inicio.scss'
+import { useParams } from "react-router-dom"
 
  const Inicio = ()=> {
     return(
