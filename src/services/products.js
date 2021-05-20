@@ -1,4 +1,4 @@
-import productsMock from '../mocks/products.json';
+import productsMock from '../ItemList/products.json';
 
 const getProducts = () => productsMock || [];
 

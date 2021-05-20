@@ -6,6 +6,7 @@
     background-color: #52734d;
     color: #91c788;
     box-sizing: border-box;
+
 }
 
 .ul-links {
@@ -23,6 +24,35 @@
 }
 .logo {
     margin-top: 10px;
-    height: 30px;
+    height: 1.8rem;
     align-items: center;
+}
+.nav-cart{
+    align-items: center;
+    display: flex;
+    margin: 0;
+
+    .in-navbar{
+        width: 8.5rem;
+        height: 1.5rem;
+        border-radius: 0.2rem;
+        border: none;
+        margin-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .btn-cart{
+        background-color: #9fe6a0;
+        height:1.8rem ;
+        width: 1.8rem;
+        border-radius: 0.2rem;
+        border: none;
+        align-items: center;
+        margin: 0;
+    }
+    .logo-cart{
+        height: 1.4rem;
+        padding-top: 2px;
+        margin: 0;
+    }
 }
