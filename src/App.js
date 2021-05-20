@@ -11,9 +11,10 @@ import {
   Route,
   Redirect,
 } from "react-router-dom"
-import  Inicio  from './components/Inicio/Inicio';
+import  Inicio  from './components/Inicio/inicio';
 import TitleProcutDetail from './components/TitleProductDetail/TitleProductDetail';
 import TitleFont from './components/TitleFront/TitleFront';
+
 
 
 
@@ -45,7 +46,7 @@ function App() {
           <Route path="/">
             <Redirect to="/products" />
           </Route>
-          <Route path="/Inicio">
+          <Route path="/inicio">
             <Inicio component={Inicio}/>
           </Route>
         </Switch>

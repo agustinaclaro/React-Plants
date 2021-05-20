@@ -2,6 +2,8 @@
 import './products.scss';
 
 
+
+
 const ProductCard = (props) => { 
     let addToCartText= "AÑADIR"
 
@@ -12,13 +14,10 @@ const ProductCard = (props) => {
             <div className="card-body">
                 <h5 className="card-title">{props.title}</h5>
                 <p className="card-text">{props.price}</p>
-                <input
-                    type="button"
-                    className="btn-card"
-                    value={addToCartText}
-    
-                />   
-                
+                <button id="cart-button" className="btn-cart" data-toggle="modal">
+               <img src={view} className="logo-cart" alt ="logo cart" />
+               <p className="numberCountCart">{props.count}</p>
+            </button>
             </div>
         </div>
     )
