@@ -1,10 +1,12 @@
 import './Inicio.scss'
+import {site} '../../site.jpg'
+
 
 export const Inicio = () => {
     return(
-    <div className = "inicio- top">
-      <h1>inicio</h1>
-      <h2>miraaa</h2>
+      <div className = "Inicio-site">
+        <img src={inicio} alt="foto site"/>
+        <p>Lorem impsu </p>
     </div>
     )
     }

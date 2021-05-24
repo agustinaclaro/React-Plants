@@ -15,6 +15,8 @@ import {
 import  {Inicio}  from './components/Inicio/Inicio';
 import TitleProcutDetail from './components/TitleProductDetail/TitleProductDetail';
 import TitleFont from './components/TitleFront/TitleFront';
+import { Cart } from './Cart/Cart';
+
 
 
 
@@ -36,6 +38,9 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
+        <Route exact path='/'>
+              <Inicio />
+            </Route>
           <Route path="/products/:id">
           <TitleProcutDetail/>
             <ProductDetail />
@@ -47,8 +52,8 @@ function App() {
           <Route path="/">
             <Redirect to="/products" />
           </Route>
-          <Route path="/Inicio">
-            <Inicio/>
+          <Route path='/cart'>
+            <Cart/>
           </Route>
         </Switch>
       </Router>
