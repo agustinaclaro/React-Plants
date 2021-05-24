@@ -39,6 +39,7 @@ function App() {
         <Navbar />
         <Switch>
         <Route exact path='/'>
+          <TitleProcutDetail/>
               <Inicio />
             </Route>
           <Route path="/products/:id">

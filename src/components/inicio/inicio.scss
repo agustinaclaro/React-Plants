@@ -1,8 +1,15 @@
-.list-cards-wrapper{
+.inicio-site{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    
+.siteImg{
+    object-fit: cover;
+
 }
-h1{
- font-size: 2rem;
+.inicio-text{
+    color: #DDFFBC;
+   background-color:#91C788; 
+}
+
 }
