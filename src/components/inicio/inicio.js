@@ -1,11 +1,11 @@
 import './Inicio.scss'
-import {site} '../../site.jpg'
+import siteImg '../../siteImg.jpg'
 
 
 export const Inicio = () => {
     return(
       <div className = "Inicio-site">
-        <img src={inicio} alt="foto site"/>
+        <img src={siteImg} alt="foto site"/>
         <p>Lorem impsu </p>
     </div>
     )
