@@ -1,7 +1,6 @@
 import './Inicio.scss'
-import { useParams } from "react-router-dom"
 
- const Inicio = ()=> {
+export const Inicio = () => {
     return(
     <div className = "inicio- top">
       <h1>inicio</h1>
@@ -9,4 +8,4 @@ import { useParams } from "react-router-dom"
     </div>
     )
     }
-export default Inicio;
+;

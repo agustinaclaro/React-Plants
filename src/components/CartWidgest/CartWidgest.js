@@ -7,7 +7,7 @@ const CardWidgest =(props)=>{
         <div className="nav-cart">
            <input type="text" id="input-navbar" className="in-navbar" placeholder="buscar" />
            <button id="cart-button" className="btn-cart" data-toggle="modal">
-               <img src={cart} className="logo-cart" alt ="logo cart" />
+               <a><img src={cart} className="logo-cart" alt ="logo cart" /></a>
                <p className="numberCountCart">{props.count}</p>
             </button>
          </div>
