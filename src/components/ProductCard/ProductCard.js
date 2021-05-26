@@ -13,6 +13,7 @@ const ProductCard = (props) => {
 
   
     return (
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
         <div id={props.id} className="card">
             <img src={props.imgUrl} className="card-img-top" alt="..." />
             <div className="card-body">
@@ -25,6 +26,7 @@ const ProductCard = (props) => {
                 < FontAwesomeIcon icon={faCartArrowDown} className="logo-cart-card"/>
             </button>
             </div>
+        </div>
         </div>
     )
 };

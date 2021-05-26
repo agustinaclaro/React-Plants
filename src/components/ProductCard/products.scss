@@ -3,6 +3,7 @@
     padding: 0.2rem;
     max-width: 250px;
 }
+
 .card {
     margin: 20px;
     border: 1px;
@@ -10,6 +11,7 @@
     border-radius: 5px;
     width: 16rem;
     justify-content: space-around;
+    
     .card-body {
         text-align: center;
         align-items: center;
@@ -27,6 +29,7 @@
         }
         .btn-cart-card {
             margin-left: 0.5rem;
+            margin-bottom: 0.2rem;
             border-radius: 2rem;
             border:solid;
             border-color:#79c56e ;

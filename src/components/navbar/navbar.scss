@@ -6,7 +6,27 @@
     background-color: #52734d;
     color: #91c788;
     box-sizing: border-box;
+    max-width: 1140;
 
+    @media (max-width: 776px) {
+        .nav-bar {
+            position: relative;
+            .logo {
+                margin: 0.2rem;
+                height: 2rem;
+            }
+        }
+        .item-link {
+            margin: 0.2px;
+            font-size: 1rem;
+            position: relative;
+            display:block;
+            left: 0;
+        }
+    }
+    .in-navbar {
+        display: none;
+    }
 }
 
 .ul-links {
@@ -27,12 +47,12 @@
     height: 1.8rem;
     align-items: center;
 }
-.nav-cart{
+.nav-cart {
     align-items: center;
     display: flex;
     margin: 0;
 
-    .in-navbar{
+    .in-navbar {
         width: 8.5rem;
         height: 1.5rem;
         border-radius: 0.2rem;
@@ -41,16 +61,16 @@
         padding-left: 0.5rem;
     }
 
-    .btn-cart{
+    .btn-cart {
         background-color: #9fe6a0;
-        height:1.8rem ;
+        height: 1.8rem;
         width: 1.8rem;
         border-radius: 0.2rem;
         border: none;
         align-items: center;
         margin: 0;
     }
-    .logo-cart{
+    .logo-cart {
         height: 1.4rem;
         padding-top: 2px;
         margin: 0;

@@ -4,6 +4,10 @@ body {
   font-family:  'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
 }
 
 code {
