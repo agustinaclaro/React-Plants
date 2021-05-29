@@ -15,7 +15,9 @@ import {
 import  {Inicio}  from './components/Inicio/Inicio';
 import TitleProcutDetail from './components/TitleProductDetail/TitleProductDetail';
 import TitleFont from './components/TitleFront/TitleFront';
-import { Cart } from './Cart/Cart';
+import { Cart } from './Cart/Cart'; 
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 

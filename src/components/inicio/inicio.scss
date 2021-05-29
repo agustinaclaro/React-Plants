@@ -1,49 +1,5 @@
-.inicio-site {
-    display: flex;
-    max-width:1110px; 
-    .square-green{
-        background-color: cadetblue;
-        width: 20rem;
-        height: 35rem;
-        margin-top: 2rem;
-        position: absolute;
-        right: 50rem;
-
-    }
-    .img-front{
-       max-height: 950px;
-       
-        margin: 2rem ;
-        position: absolute;
-        right: 20rem;
-
-    .siteImg {
-        height:50rem; 
-        margin: 4rem 5rem;
+.main_site{
+    .img{
         width: 100%;
-        
-       
-    }
-}
-    .inicio-text {
-        color:black;
-        height: 20rem;
-        width: 50rem;
-        position: absolute;
-        margin-left: 50rem ;
-        .welcome-text {
-            font-size: 4rem;
-            font-weight: 100;
-            position: relative;
-            justify-content: center;
-            margin-top: 20rem;
-            margin-bottom: 5rem;
-        }
-
-        .logo-site {
-            height: 5rem;
-           position: relative;
-
-        }
     }
 }

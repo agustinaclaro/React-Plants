@@ -1,22 +1,16 @@
 import './Inicio.scss'
-import siteImg from'../../siteImg.jpg'
+import inc_background from'../../siteImg.jpg'
 import logo from '../../logo.png'
 
 
 export const Inicio = () => {
     return(
       <div className = "inicio-site">
-        <div className="square-green"></div>
-        <div className="img-front">
-        <img src={siteImg} className="siteImg" alt="foto site"/>
+        <h2 className="welcome-text">Bienvenidos a Pequeño Respiro </h2>
+        <div className= "main-site" >
+        <img className="img-fluid" src="../../inc_bacground"/>
         </div>
-        <div className ="inicio-text">
-        <h2 className="welcome-text">Bienvenidos</h2>
-        
-        <p>PEQUEÑO RESPIRO</p>
-        <img src={logo} className="logo-site" alt="logo site"/>
-        
-        </div>
+      
     </div>
     )
     }
