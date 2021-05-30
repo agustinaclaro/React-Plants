@@ -40,7 +40,7 @@
         "price": "$1200",
         "imgUrl": "../img/plantas1-5.jpg",
         "id": "palnta5",
-        "stock": "5"
+        "stock": "0"
     },
     {
         "title": "Suculenta",
@@ -61,7 +61,7 @@
         "price": "$1200",
         "imgUrl": "../img/plantas1-8.jpg",
         "id": "palnta8",
-        "stock": "5"
+        "stock": "0"
     },
     {
         "title": "Melisa",
@@ -82,6 +82,6 @@
         "price": "$1200",
         "imgUrl": "../img/plantas1-11.jpg",
         "id": "palnta11",
-        "stock": "5"
+        "stock": "0"
     }
 ]

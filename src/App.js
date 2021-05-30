@@ -1,9 +1,9 @@
 
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.scss';
 import Navbar from './components/navbar/navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ProductDetail from './components/ProductDetail/ProductDetail'
-import { useEffect, useState } from 'react';
 import { getProducts } from './services/products';
 import {
   BrowserRouter as Router,
@@ -13,10 +13,8 @@ import {
 } from "react-router-dom"
 
 import  {Inicio}  from './components/Inicio/Inicio';
-import TitleProcutDetail from './components/TitleProductDetail/TitleProductDetail';
-import TitleFont from './components/TitleFront/TitleFront';
-import { Cart } from './Cart/Cart'; 
-import 'bootstrap/dist/css/bootstrap.css';
+import { Cart } from './components/Cart/Cart'; 
+import {CartProvider} from './components/Context/CartContext';
 
 
 
@@ -37,28 +35,34 @@ function App() {
 
   return (
     <div className="App">
+      
       <Router>
+      <CartProvider> 
         <Navbar />
         <Switch>
         <Route exact path='/'>
               <Inicio />
             </Route>
           <Route path="/products/:id">
-          <TitleProcutDetail/>
+     
             <ProductDetail />
           </Route>
           <Route path="/products">
-            <TitleFont/>
+           
             <ItemListContainer products={filteredProducts} />
           </Route>
           <Route path="/">
             <Redirect to="/products" />
           </Route>
-          <Route path='/cart'>
-            <Cart/>
-          </Route>
+         
+         
+            <Route path='/cart'>
+            </Route>
+         
         </Switch>
+        </CartProvider>
       </Router>
+         
     </div>
   );
 }

@@ -12,18 +12,14 @@ const Navbar = () => {
     <header>
    <nav className="navbar container">
    
-    <NavLink exact to= '/'><img src={logo_white} className="logo_white " alt="logo site"/></NavLink>  
+    <NavLink  to= '/'><img src={logo_white} className="logo_white " alt="logo site"/>pequeño respiro</NavLink>  
     
      <ul className="ul-links">
        <li className="item-link active" ><NavLink exact to="/">Inicio</NavLink></li>
        <li className="item-link"  ><NavLink to="/products">Nuestros productos</NavLink></li>
      </ul>
-  
      </nav> 
-    
      <NavLink to ={"/cart"}><CardWidgest /> </NavLink>
-    
-    
   </header>
    
     )

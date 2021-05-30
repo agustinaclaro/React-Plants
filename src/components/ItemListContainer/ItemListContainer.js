@@ -1,5 +1,5 @@
 
-import ProductCard from '../ProductCard/ProductCard';
+import ProductCard from '../Item/Item';
 import './ItemListContainer.scss';
 import { useHistory } from 'react-router-dom';
 

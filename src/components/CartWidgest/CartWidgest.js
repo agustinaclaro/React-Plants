@@ -7,10 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const CardWidgest =(props)=>{
     return (
         <div className="nav-cart">
-           <input type="text" id="input-navbar" className="in-navbar" placeholder="buscar" />
            <button id="cart-button"className="btn-cart" data-toggle="modal" >
-               <a>< FontAwesomeIcon icon={faCartArrowDown} className="logoCartNav"/></a>
-               <p className="numberCountCart">{props.count}</p>
+               <a>< FontAwesomeIcon icon={faCartArrowDown} className="logoCartNav"/>cart</a>
+               <span className="numberCountCart">{props.count}</span>
             </button>
          </div>
     )
