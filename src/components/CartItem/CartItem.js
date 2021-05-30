@@ -1,7 +1,7 @@
 import './CartItem.scss'
 
 import { useContext } from 'react'
-import { CartContext } from '../Context/CartContext'
+import { CartContext } from '../../Context/CartContext'
 
 export const CartItem = ({ item, quantity }) => {
     <div className="cart_item">

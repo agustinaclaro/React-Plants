@@ -1,9 +1,9 @@
 
-import ProductCard from '../Item/Item';
-import './ItemListContainer.scss';
+import Item from '../Item/Item';
+import './ItemList.scss';
 import { useHistory } from 'react-router-dom';
 
-const ItemListContainer = ({ products }) => {
+const ItemList = ({ products }) => {
     const history = useHistory();
     return (
         <div className="cards-group">

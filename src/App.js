@@ -2,7 +2,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.scss';
 import Navbar from './components/navbar/navbar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './components/ItemList/ItemList';
 import ProductDetail from './components/ProductDetail/ProductDetail'
 import { getProducts } from './services/products';
 import {
@@ -14,7 +14,7 @@ import {
 
 import  {Inicio}  from './components/Inicio/Inicio';
 import { Cart } from './components/Cart/Cart'; 
-import {CartProvider} from './components/Context/CartContext';
+import {CartProvider} from './Context/CartContext';
 
 
 
@@ -31,7 +31,7 @@ function App() {
     console.log(searchValue);
   };
 
- <input type='text' placeholder='buscar' value={filter} onChange={(e) => search(e.target.value)} />
+
 
   return (
     <div className="App">
