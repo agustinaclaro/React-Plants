@@ -2,8 +2,10 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.scss';
 import Navbar from './components/navbar/navbar';
-import ItemListContainer from './components/ItemList/ItemList';
-import ProductDetail from './components/ProductDetail/ProductDetail'
+import ItemList from './components/ItemList/ItemList';
+import {ItemListContainer} from './components/ItemListContainer/ItemListContainer'
+import ProductDetail from './components/ProductDetail/ProductDetail';
+import {useState} from 'react'
 import { getProducts } from './services/products';
 import {
   BrowserRouter as Router,
@@ -44,12 +46,11 @@ function App() {
               <Inicio />
             </Route>
           <Route path="/products/:id">
-     
             <ProductDetail />
           </Route>
+
           <Route path="/products">
-           
-            <ItemListContainer products={filteredProducts} />
+            <ItemList products={filteredProducts} />
           </Route>
           <Route path="/">
             <Redirect to="/products" />
@@ -57,7 +58,12 @@ function App() {
          
          
             <Route path='/cart'>
+              <Cart/>
             </Route>
+
+            <Route path='/category/:categoryId'>
+            <ItemListContainer data={data}/>
+          </Route>
          
         </Switch>
         </CartProvider>

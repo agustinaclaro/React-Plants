@@ -8,7 +8,7 @@ const ItemList = ({ products }) => {
     return (
         <div className="cards-group">
             {products.map((product) => (
-                <ProductCard
+                <Item
                     key={product.id}
                     title={product.title}
                     price={product.price}
@@ -20,4 +20,4 @@ const ItemList = ({ products }) => {
     );
 };
 
-export default ItemListContainer;
+export default ItemList;

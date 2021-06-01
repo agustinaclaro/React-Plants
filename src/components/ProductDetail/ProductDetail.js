@@ -2,10 +2,9 @@ import './ProductDetail.scss'
 import { useState } from 'react';
 import { useParams } from "react-router-dom"
 import { getProductById } from '../../services/products';
-import TitleProcutDetail, { TitleProductDetail } from '../TitleProductDetail/TitleProductDetail'
 import ItemCounter from '../ItemCount/ItemCount.js'
 
-const ProductDetail = (props) => {
+const ProductDetail = () => {
     const { id } = useParams();
     const productData = getProductById(id);
     const onAdd =(count)=>{

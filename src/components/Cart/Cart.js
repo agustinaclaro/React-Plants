@@ -1,6 +1,8 @@
 import './Cart.scss'
 import {Fragment, useContext} from 'react';
 import {CartContext} from '../../Context/CartContext'
+import {CartItem} from '../CartItem/CartItem'
+
 
 export const Cart =()=>{
    const {cart, clear,totalPrice}= useContext(CartContext)

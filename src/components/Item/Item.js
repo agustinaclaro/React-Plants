@@ -8,9 +8,10 @@ import {faCartArrowDown}from '@fortawesome/free-solid-svg-icons'
 
 
 
-const ProductCard = ({item}) => { 
+
+ const Item = (item) => { 
     return (
-        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4"> 
         <div id={item.id} className="card">
             <img src={item.imgUrl} className="card-img-top" alt="..." />
             <div className="card-body">
@@ -26,7 +27,8 @@ const ProductCard = ({item}) => {
             </div>
             {(item.stock === 0 ) && <p className="outOfStock">Sin stock</p>}
         </div>
+       
         </div>
     )
 };
-export default ProductCard;
+export default Item;
