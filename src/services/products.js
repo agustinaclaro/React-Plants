@@ -2,9 +2,10 @@ import productsMock from '../ProductList/products.json';
 
 const getProducts = () => productsMock || [];
 
-const getCategoryId= (data)=>{
-    let categoty = data.filter(product => product.categoryId === categoryId) || null;
-    return getCategoryId
+const getProductCategoryId= (categoryId)=>{
+    const products = getProducts();
+   return products.filter(product => product.categoryId === categoryId) || null;
+   
 }
 
 
@@ -17,5 +18,5 @@ const getProductById = (productId) => {
 export {
     getProducts,
     getProductById,
-    getCategoryId,
+    getProductCategoryId,
 };

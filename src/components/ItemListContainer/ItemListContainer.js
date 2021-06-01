@@ -1,14 +1,16 @@
-import './itemListContainer.scss'
-import {ItemList} from '../itemList/itemList'
-import { getCategoryId } from '../../services/products';
+
+import { useParams } from "react-router-dom"
+import { getProductCategoryId } from '../../services/products';
+
+import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = () => {
-    const {categoryId} = useParams()
-    const categoty = getCategoryId();
+    const {categotyId} = useParams()
+    const categoty = getProductCategoryId(categotyId);
 
     return(
         <div className="itemListContainer">
-            <ItemList data={data} />
+           <ItemList/>
         </div>
     )
 } 
