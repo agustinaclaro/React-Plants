@@ -1,16 +1,19 @@
-import productsMock from '../ProductList/products.json';
+import productsMock from '../ProductList/products.json'; 
 
-const getProducts = () => productsMock || [];
 
-const getProductCategoryId= (categoryId)=>{
-    const products = getProducts();
-   return products.filter(product => product.categoryId === categoryId) || null;
-   
+const getProducts = async () => {
+    const products = await productsMock;
+    return products;
+}
+
+const getProductCategoryId= async (categoryId)=>{
+    const products = await getProducts();
+    return products.filter(product => product.categoryId === categoryId) || [];
 }
 
 
-const getProductById = (productId) => {
-    const products = getProducts();
+const getProductById = async (productId) => {
+    const products = await getProducts();
 
     return products.find(product => product.id === productId) || null;
 };

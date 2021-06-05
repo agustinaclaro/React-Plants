@@ -5,7 +5,7 @@ import Navbar from './components/navbar/navbar';
 import ItemList from './components/ItemList/ItemList';
 
 import ProductDetail from './components/ProductDetail/ProductDetail';
-import {useState} from 'react'
+import { useState } from 'react'
 import { getProductCategoryId, getProducts } from './services/products';
 import {
   BrowserRouter as Router,
@@ -14,10 +14,12 @@ import {
   Redirect,
 } from "react-router-dom"
 
-import  {Inicio}  from './components/Inicio/Inicio';
-import { Cart } from './components/Cart/Cart'; 
-import {CartProvider} from './Context/CartContext';
+import { Inicio } from './components/Inicio/Inicio';
+import { Cart } from './components/Cart/Cart';
+import { CartProvider } from './Context/CartContext';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import TitleFront from './components/TitleFront/TitleFront';
+import Footer from './components/Footer/footer';
 
 
 
@@ -32,38 +34,33 @@ function App() {
 
   return (
     <div className="App">
-      
+
       <Router>
-      <CartProvider> 
-        <Navbar />
-        <Switch>
-        <Route exact path='/'>
+        <CartProvider>
+          <Navbar />
+          <TitleFront/>
+          <Switch>
+            <Route exact path='/'>
               <Inicio />
             </Route>
-          <Route path="/products/:id">
-            <ProductDetail />
-          </Route>
-
-          <Route path="/products">
-            <ItemList/>
-          </Route>
-          <Route path="/">
-            <Redirect to="/products" />
-          </Route>
-         
-         
             <Route path='/cart'>
-              <Cart/>
+              <Cart />
+            </Route>
+            <Route path='/category/:categoryId'>
+              <ItemListContainer />
+            </Route>
+            <Route path="/products/:id">
+              <ProductDetail />
+            </Route>
+            <Route path="/products">
+              <ItemListContainer />
             </Route>
 
-            <Route path='products/category/:categoryId'>
-            <ItemListContainer/>
-          </Route>
-         
-        </Switch>
+          </Switch>
+          <Footer/>
         </CartProvider>
       </Router>
-         
+
     </div>
   );
 }

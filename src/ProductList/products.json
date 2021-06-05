@@ -1,7 +1,7 @@
 [
     {
         "title": "Bambusa",
-        "categoryId": "general",
+        "categoryId": "crasas",
         "price": "$1200",
         "imgUrl": "../img/plantas1-0.jpg",
         "id": "palnta0",
@@ -10,7 +10,7 @@
     },
     {
         "title": "Amapola",
-        "categoryId": "general",
+        "categoryId":  "crasas",
         "price": "$1200",
         "imgUrl": "../img/plantas1-1.jpg",
         "id": "palnta1",
@@ -18,7 +18,7 @@
     },
     {
         "title": "Ficus",
-        "categoryId": "general",
+        "categoryId":  "crasas",
         "price": "$1200",
         "imgUrl": "../img/plantas1-2.jpg",
         "id": "palnta2",
@@ -42,7 +42,7 @@
     },
     {
         "title": "Potus",
-        "categoryId": "general",
+        "categoryId":  "crasas",
         "price": "$1200",
         "imgUrl": "../img/plantas1-5.jpg",
         "id": "palnta5",
@@ -50,7 +50,7 @@
     },
     {
         "title": "Suculenta",
-        "categoryId": "general",
+        "categoryId":  "crasas",
         "price": "$1200",
         "imgUrl": "../img/plantas1-6.jpg",
         "id": "palnta6",
@@ -58,7 +58,7 @@
     },
     {
         "title": "Drasena",
-        "categoryId": "general",
+        "categoryId":  "crasas",
         "price": "$1200",
         "imgUrl": "../img/plantas1-7.jpg",
         "id": "palnta7",

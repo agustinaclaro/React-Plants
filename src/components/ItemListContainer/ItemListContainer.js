@@ -1,17 +1,37 @@
 
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-import { getProductCategoryId } from '../../services/products';
+import { getProductCategoryId, getProducts } from '../../services/products';
+import CategoryLink from '../CategoryLink/CategoryLink'
 
 import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = () => {
-    const {categotyId} = useParams()
-    const categoty = getProductCategoryId(categotyId);
+    const { categoryId } = useParams();
+    const [products, setProducts] = useState([]);
 
-    return(
+    useEffect(() => {
+        const getProductsList = () => {
+            if (categoryId) {
+                getProductCategoryId(categoryId)
+                    .then((data) => setProducts(data))
+                    .catch((error) => console.error('HUBO UN ERROR: ', error))
+            } else {
+                getProducts()
+                    .then((data) => setProducts(data))
+                    .catch((error) => console.error('HUBO UN ERROR: ', error))
+            }
+        }
+
+        getProductsList();
+    }, [categoryId]);
+
+
+    return (
         <div className="itemListContainer">
-           <ItemList/>
+            <CategoryLink />
+            <ItemList products={products}/>
         </div>
     )
-} 
+}
 export default ItemListContainer;

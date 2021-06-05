@@ -8,7 +8,7 @@ const CardWidgest =(props)=>{
     return (
         <div className="nav-cart">
            <button id="cart-button"className="btn-cart" data-toggle="modal" >
-               <a>< FontAwesomeIcon icon={faCartArrowDown} className="logoCartNav"/>cart</a>
+               <a>< FontAwesomeIcon icon={faCartArrowDown} className="logoCartNav"/></a>
                <span className="numberCountCart">{props.count}</span>
             </button>
             {

@@ -10,26 +10,22 @@
     padding:10px;
     background-color: rgba(128, 128, 128, 0.205);
 }
-.cartItemInfo{
+.cart_detail{
     width:50%;
 }
-.imgItemCart{
+.Img_itemCart{
     width:150px;
     height: 150px;
     background-size: cover;
 }
-.buttonRemoveItem{
-    
-    background-repeat: no-repeat;
-    background-size: cover;
+.btn_Remove_Item{
     height: 24px;
-    background-color: rgba(223, 32, 32, 0.884);
+    background-color: rgba(170, 15, 15, 0.884);
     width: 24px;
     display: block;
     border: none;
-    margin-left: 15px;
 }
-.buttonRemoveItem:hover{
+.btn_Remove_Item:hover{
     transition: .5s;
     background-color: rgba(161, 12, 12, 0.884);
 
