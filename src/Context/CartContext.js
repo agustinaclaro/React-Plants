@@ -1,5 +1,5 @@
 import { createContext} from 'react'
-import{useState} from 'react-dom'
+import{useState} from 'react'
 
 
 
@@ -14,12 +14,13 @@ export const CartProvider = ({ children }) => {
         return array.reduce((a, b) => a + b, 0)
     }
    
-    const isInCart= (id) => cart.some(({item})=> item.id === id)
+    const isInCart= (id) => {
+        const findItem =cart.findIndex(({item}) => item.id === id ) 
+       return findItem 
+    }
 
-    const indexInCart = (id) => cart.findIndex(({item}) => item.id === id ) 
-    
     const addItem = (item, qty) => {
-
+    
         if (isInCart(item.id) >= 0) {
             cart[isInCart(item.id)].quantity += qty
             setCart(cart)
@@ -28,6 +29,7 @@ export const CartProvider = ({ children }) => {
                 item: item,
                 quantity: qty
             }])
+            
         }
         setTotalItems(totalItems + qty)
     }
@@ -47,10 +49,6 @@ export const CartProvider = ({ children }) => {
         const newCartSubTotal = cart.map(({ item, quantity }) => item.price * quantity)
         return addElements(newCartSubTotal)
     }
-
-
-
-
 
     return (
         <CartContext.Provider value={{

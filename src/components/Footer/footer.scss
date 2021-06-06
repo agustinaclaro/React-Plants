@@ -1,0 +1,19 @@
+.footer_global{
+    background-color: yellow;
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        li {
+            a {
+                text-decoration: none;
+            }
+            .logoFooter{
+                font-size: 30px;
+                padding: 40px 5px;
+                color: #000;
+                text-decoration: none;
+            }
+        }
+    }
+}

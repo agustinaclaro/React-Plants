@@ -1,7 +1,5 @@
 import './footer.scss'
-import {faInstagram}from '@fortawesome/free-solid-svg-icons';
-import {faFacebook} from '@fortawesome/free-solid-svg-icons';
-import {faWhatsapp} from '@fortawesome/free-solid-svg-icons';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = ()=>{
@@ -10,9 +8,9 @@ const Footer = ()=>{
             <div className="footer_social_icons">
                 <nav>
                     <ul>
-                        <li><a href="http://facebook.com" target="_blank">< FontAwesomeIcon icon={faFacebook} className="logoFooter"/></a></li>
-                        <li><a href="http://instagram.com" target="_blank">< FontAwesomeIcon icon={faInstagram} className="logoFooter"/></a></li>
-                        <li><a href="http://whatsapp.com" target="_blank">< FontAwesomeIcon icon={faWhatsapp} className="logoFooter"/></a></li>
+                        <li><a href="http://facebook.com" target="_blank">< FontAwesomeIcon  icon={["fab", "facebook"]} className="logoFooter"/></a></li>
+                        <li><a href="http://instagram.com" target="_blank">< FontAwesomeIcon icon={["fab", "instagram"]} className="logoFooter"/></a></li>
+                        <li><a href="http://whatsapp.com" target="_blank">< FontAwesomeIcon  icon={["fab", "whatsapp"]}className="logoFooter"/></a></li>
                     </ul>
                 </nav>
             </div>

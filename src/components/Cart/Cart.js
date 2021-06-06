@@ -6,12 +6,11 @@ import {Link} from 'react-router-dom'
 
 
 
-export const Cart = () => {
+ export const Cart = () => {
     const { cart, clear, totalPriceCart } = useContext(CartContext)
     return (
-        <div className="cart">
+        <div className="cart_body">
             <h2 className="cartTitle">Carrito</h2>
-            {cart.length > 0 ?
                 <Fragment>
                     <div className="RemoveAllContainer">
                         <button className="btn_Remove"
@@ -22,16 +21,16 @@ export const Cart = () => {
                             quantity={quantity} showButtonRemove={true}>
                         </CartItem>
                     )}
-                    <p className="totalCart">Total Compra: €{totalPriceCart()}</p>
+                    <p className="total_Cart">Total Compra: ${totalPriceCart()}</p>
 
                 </Fragment> 
-                :
+                
                 <div className="cartEmptyContainer">
                     <p> El carrito se encuentra vacio</p>
-                    <Link to='/'><button className="buttonHome">Volver al home</button>
+                    <Link to='/'><button className="buttonHome">Volver al inicio</button>
                     </Link>
                 </div>
-            }
+            
         </div>
     )
-}
+} 

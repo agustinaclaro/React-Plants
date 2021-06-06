@@ -12,7 +12,7 @@ const CardWidgest =(props)=>{
                <span className="numberCountCart">{props.count}</span>
             </button>
             {
-            totalItems > 0 && <span className="numberCountCart">{totalItems}</span>
+            totalItems > 0 && <span className="numberCountCart">({totalItems})</span>
             }
             
          </div>

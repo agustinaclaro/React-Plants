@@ -2,7 +2,7 @@
     {
         "title": "Bambusa",
         "categoryId": "crasas",
-        "price": "$1200",
+        "price": "$1000",
         "imgUrl": "../img/plantas1-0.jpg",
         "id": "palnta0",
         "stock": "5"
@@ -11,15 +11,15 @@
     {
         "title": "Amapola",
         "categoryId":  "crasas",
-        "price": "$1200",
+        "price": "$1000",
         "imgUrl": "../img/plantas1-1.jpg",
         "id": "palnta1",
-        "stock": "5"
+        "stock": "4"
     },
     {
         "title": "Ficus",
         "categoryId":  "crasas",
-        "price": "$1200",
+        "price": "$1000",
         "imgUrl": "../img/plantas1-2.jpg",
         "id": "palnta2",
         "stock": "5"
@@ -43,15 +43,15 @@
     {
         "title": "Potus",
         "categoryId":  "crasas",
-        "price": "$1200",
+        "price": "$1000",
         "imgUrl": "../img/plantas1-5.jpg",
         "id": "palnta5",
-        "stock": "0"
+        "stock": "1"
     },
     {
         "title": "Suculenta",
         "categoryId":  "crasas",
-        "price": "$1200",
+        "price": "$1000",
         "imgUrl": "../img/plantas1-6.jpg",
         "id": "palnta6",
         "stock": "5"
@@ -59,7 +59,7 @@
     {
         "title": "Drasena",
         "categoryId":  "crasas",
-        "price": "$1200",
+        "price": "$1000",
         "imgUrl": "../img/plantas1-7.jpg",
         "id": "palnta7",
         "stock": "5"
@@ -73,25 +73,25 @@
         "stock": "0"
     },
     {
-        "title": "Melisa",
+        "title": "Bonsai thailand",
         "categoryId": "bonsai",
-        "price": "$1200",
+        "price": "$4200",
         "imgUrl": "../img/plantas1-9.jpg",
         "id": "palnta9",
         "stock": "5"
     },
     {
-        "title": "Penca",
+        "title": "Bonsai Japan",
         "categoryId": "bonsai",
-        "price": "$1200",
+        "price": "$3200",
         "imgUrl": "../img/plantas1-10.jpg",
-        "id": "Aloe Vera",
+        "id": "planta10",
         "stock": "5"
     },
     {
-        "title": "Look",
+        "title": "Bonsai American",
         "categoryId": "bonsai",
-        "price": "$1200",
+        "price": "$3900",
         "imgUrl": "../img/plantas1-11.jpg",
         "id": "palnta11",
         "stock": "0"
