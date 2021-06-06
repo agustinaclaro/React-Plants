@@ -1,9 +1,8 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
+
 import './App.scss';
 import Navbar from './components/navbar/navbar';
-import ItemList from './components/ItemList/ItemList';
-
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import { useState } from 'react'
 import { getProductCategoryId, getProducts } from './services/products';
