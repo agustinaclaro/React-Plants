@@ -1,34 +1,45 @@
 import { createContext} from 'react'
-import{useState} from 'react'
+import{useState } from 'react'
+import { getProductById } from '../services/products';
+
+
 
 
 
 export const CartContext = createContext()
 
-
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
     const [totalItems, setTotalItems] = useState(0)
-    
+
+
+    const item =()=>{
+        getProductById ()
+     return item
+    }
+
     const addElements = (array) => {
         return array.reduce((a, b) => a + b, 0)
     }
-   
-    const isInCart= (id) => {
-        const findItem =cart.findIndex(({item}) => item.id === id ) 
-       return findItem 
-    }
-
-    const addItem = (item, qty) => {
     
+    const isInCart= (id) => {
+        
+        const findItem =cart.findIndex((product) => product.id === id ) 
+        return findItem 
+    }
+    
+    const addItem = (item, qty) => {
+       
         if (isInCart(item.id) >= 0) {
             cart[isInCart(item.id)].quantity += qty
             setCart(cart)
         } else {
             setCart([...cart, {
-                item: item,
+                item:item,
                 quantity: qty
+              
             }])
+            
             
         }
         setTotalItems(totalItems + qty)
@@ -53,7 +64,7 @@ export const CartProvider = ({ children }) => {
     return (
         <CartContext.Provider value={{
             cart, addItem,isInCart, removeItem, clear,
-            totalPriceCart, totalItems,
+            totalPriceCart, totalItems, item
         }} >
             {children}
         </CartContext.Provider>

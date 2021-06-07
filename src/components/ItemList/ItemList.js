@@ -1,7 +1,7 @@
 
 import Item from '../Item/Item';
 import './ItemList.scss';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../../Context/CartContext'
 
@@ -18,7 +18,7 @@ const ItemList = ({ products = [] }) => {
                     price={product.price}
                     imgUrl={product.imgUrl}
                     onImageClick={() => history.push(`/products/${product.id}`)}
-                    onAddtoCart={(item) => addItem(item, 1)}
+                    onAddtoCart={(item) => addItem({item}, 1)}
                 />
             ))}
         </div>

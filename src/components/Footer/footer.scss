@@ -1,29 +1,21 @@
 .footer_global{
     background-color: rgb(39, 174, 95);
-}   
-    
-.footer_social_icons{
-       
-    ul {
+}         
+.footer_ul{
         display: flex;
         justify-content: center;
         list-style-type: none;
-        li {
-            a{
-            text-decoration: none;
-        }
+}
+       
         .logo_Footer{
             height: 1rem;
+            width: 2rem;
             justify-content: space-around;
             padding: 40px 5px;
             color: #000;
         }
  
-    }
-}
-}
-
-
+    
     .contacto_redes{
         justify-content: center;
     }

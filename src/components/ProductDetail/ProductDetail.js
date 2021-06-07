@@ -1,12 +1,12 @@
 import './ProductDetail.scss'
-import { useState,useEffect, useContext } from 'react';
-import { useParams } from "react-router-dom"
+import { useState,useEffect} from 'react';
+import { useParams } from "react-router-dom";
 import { getProductById } from '../../services/products';
-import ItemCounter from '../ItemCount/ItemCount.js'
-import {CartContext} from '../../Context/CartContext'
+import ItemCounter from '../ItemCount/ItemCount.js';
 import {Link} from 'react-router-dom'
 
 const ProductDetail = () => {
+   
     const { id } = useParams();
     const[product, setProduct]=useState({})
     useEffect(() => {
@@ -21,6 +21,7 @@ const ProductDetail = () => {
 
     const onAdd =(count)=>{
         alert(`Agrego al carrito ${count} ${product.title}`)
+        
     }
     return (
 
@@ -32,17 +33,18 @@ const ProductDetail = () => {
                     <p className="card-price-pd">precio :{product.price}</p>                
                 </div>
                     < ItemCounter stock={product.stock} initial={1} onAdd={onAdd} />
-            </div>
-            <img src={product.imgUrl} className="card-img-top-pd" alt="..." />
-        
-                 <div>
+                    <div>
                  <Link to="/cart">
                      <button 
-                             className="buttonFinish">
+                             className="buttonFinish" >
                          Terminar compra
                      </button>
                  </Link>
              </div>
+            </div>
+            <img src={product.imgUrl} className="card-img-top-pd" alt="..." />
+        
+    
              </div>
     )
 };

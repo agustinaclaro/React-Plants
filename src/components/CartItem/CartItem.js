@@ -1,11 +1,29 @@
 import './CartItem.scss'
-import { useContext } from 'react'
+import {  useContext} from 'react'
 import { CartContext } from '../../Context/CartContext'
+import { useState,useEffect} from 'react';
+import { useParams } from "react-router-dom";
+import { getProductById } from '../../services/products';
 
-export const CartItem = ({ item, quantity,showButtonRemove}) => {
+
+
+export const CartItem = ( {quantity,showButtonRemove}) => {
+    const { id } = useParams();
+    const[item, setItem]=useState({})
+    useEffect(() => {
+        const getProduct = () => {
+            getProductById(id)
+                .then((data) => setItem(data))
+                .catch((error) => console.error('HUBO UN ERROR: ', error))
+        }
+
+        getProduct();
+    }, []);
+
     const {removeItem} = useContext(CartContext)
 
     const totalCartItem = (price,qty) => price * qty
+
 return(
     <div className="cart_item" key={item.id}>
         <div>
@@ -24,6 +42,7 @@ return(
         </div>
 
     </div>
+   
 )
 
 
