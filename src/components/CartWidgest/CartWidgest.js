@@ -1,7 +1,7 @@
 import {faCartArrowDown}from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {useContext} from 'react'
 import { CartContext } from '../../Context/CartContext'
+import {useContext} from 'react'
 
 const CardWidgest =(props)=>{
     const {totalItems} = useContext(CartContext)

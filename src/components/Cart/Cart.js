@@ -6,9 +6,9 @@ import { CartItem } from '../CartItem/CartItem'
 import {Link} from 'react-router-dom'
 
 
-
- export const Cart = () => {
-    const { cart, clear, totalPriceCart, } = useContext(CartContext)
+export const Cart = () => {
+    const { cart, clear, totalPriceCart,getCartItem } = useContext(CartContext)
+    
     return (
         <div className="cart_body">
             <h2 className="cartTitle">Carrito</h2>
@@ -26,8 +26,7 @@ import {Link} from 'react-router-dom'
                     <p className="total_Cart">Total Compra: ${totalPriceCart()}</p>
 
                 </Fragment> 
-                
-                
+                  
                 <div className="cartEmptyContainer">
                     <p> El carrito se encuentra vacio</p>
                     <Link to='/'><button className="buttonHome">Volver al inicio</button>

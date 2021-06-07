@@ -8,9 +8,9 @@ const Footer = ()=>{
         <div className="footer_global">
             <div className="footer_social_icons">
                    <ul className="footer_ul">
-                        <li className="footer_li">< FontAwesomeIcon  icon={faFacebook} className="logo_Footer"/></li>
-                        <li className="footer_li">< FontAwesomeIcon icon={faInstagram} className="logo_Footer"/></li>
-                        <li className="footer_li">< FontAwesomeIcon  icon={faWhatsapp} className="logo_Footer"/></li>
+                        <li>< FontAwesomeIcon  icon={faFacebook} className="logo_footer"/></li>
+                        <li>< FontAwesomeIcon icon={faInstagram} className="logo_footer"/></li>
+                        <li>< FontAwesomeIcon  icon={faWhatsapp} className="logo_footer"/></li>
                     </ul>  
             </div>
             <p className="contacto_redes">Contactanos en nuestras redes sociales</p>

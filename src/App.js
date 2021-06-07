@@ -4,8 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.scss';
 import Navbar from './components/navbar/navbar';
 import ProductDetail from './components/ProductDetail/ProductDetail';
-import { useState } from 'react'
-import { getProductCategoryId, getProducts } from './services/products';
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,10 +25,7 @@ import Footer from './components/Footer/footer';
 
 
 function App() {
-  const products = getProducts();
-  const [filter, setFilter] = useState('')
-  const [filteredProducts, setFilteredProducts] = useState(products)
-
+ 
   return (
     <div className="App">
 

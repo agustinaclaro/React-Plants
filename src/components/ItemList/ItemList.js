@@ -18,7 +18,7 @@ const ItemList = ({ products = [] }) => {
                     price={product.price}
                     imgUrl={product.imgUrl}
                     onImageClick={() => history.push(`/products/${product.id}`)}
-                    onAddtoCart={(item) => addItem({item}, 1)}
+                    onAddtoCart={(item) => addItem(item, 1)}
                 />
             ))}
         </div>
