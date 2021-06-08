@@ -34,11 +34,10 @@ const ProductDetail = () => {
                     <p className="card-text-pd">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente iste iure deserunt accusamus bland iste iure deserunt accusamus blanditiis a provident dolorem fugiat laborum ipsum modi amet, quod suscipit veniam. !</p>
                     <p className="card-price-pd">precio :{product.price}</p>                
                 </div>
-                    < ItemCounter stock={product.stock} initial={1} onAdd={onAdd}  onAddtoCart={addItem(product, 1)} />
+                    < ItemCounter stock={product.stock} initial={1} onAdd={onAdd}/>
                     <div>
                  <Link to="/cart">
-                     <button 
-                             className="buttonFinish" >
+                     <button  className="buttonFinish" >
                          Terminar compra
                      </button>
                  </Link>

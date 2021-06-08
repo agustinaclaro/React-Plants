@@ -1,25 +1,30 @@
-.footer_global{
+.footer_global {
     background-color: rgb(39, 174, 95);
-}         
-.footer_ul{
-        display: flex;
-        justify-content: center;
-        list-style-type: none;
 }
-     
-.logo_Footer{
-            width: 2rem;
+.footer_ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+li {
+    margin: 0.5rem 0.5rem;
+    a {
+        text-decoration: none;
+        color: black;
+        height: 5rem;
+    }
+        .logo_Footer {
             margin-left: 2rem;
             margin-right: 2rem;
             padding: 40px 5px;
-            color: #000;
-        }
-    
-    
-    .contacto_redes{
-        text-align: center;
+            color:#91c788;
+        
     }
-    .copyright{
-        text-align: center;
-    }
+}
 
+.contacto_redes {
+    text-align: center;
+}
+.copyright {
+    text-align: center;
+}
