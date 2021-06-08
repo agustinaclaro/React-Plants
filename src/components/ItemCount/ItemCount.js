@@ -1,5 +1,8 @@
 import {useState} from 'react'
+import {CartContext} from '../../Context/CartContext'
+import {  useContext} from 'react'
 const ItemCounter =({stock,initial,onAdd})=>{   
+    const { addItem } = useContext(CartContext)
     const [count, setCount] = useState(initial)
         
         const increment = () =>  { if (count < stock) {
@@ -14,17 +17,18 @@ const ItemCounter =({stock,initial,onAdd})=>{
             setCount(1)
         }
         }
+        const disabledButtonAdd = () => count === 0
     
         return (   
             <div>
                    <div className="buttonAddContainer">
                     <button className="buttonAdd" onClick={() => {onAdd(count)
-                        setCount(1)}}>AGREGAR AL CARRITO</button>
+                        setCount(1)}}  onAddtoCart={(item) => addItem({item}, 1)}>AGREGAR AL CARRITO</button>
                 </div>
                 <div className="btn-productDetail">
-                        <input type="button" value="-" className="btn-addProduct increment" onClick={decrement}/>
+                        <input type="button" value="-" className="btn-addProduct increment" disabled={disabledButtonAdd()} onClick={decrement}/>
                         <span className="btn-text numberCount" >{count}</span>
-                        <input type="button" value="+" className="btn-addProduct decrement" onClick={increment}/>
+                        <input type="button" value="+" className="btn-addProduct decrement"disabled={disabledButtonAdd()} onClick={increment}/>
                     </div>
 
              

@@ -1,12 +1,13 @@
 import './Inicio.scss'
-import { useParams } from "react-router-dom"
+import inicio_back from'../../inicio_back.jpg'
 
- const Inicio = ()=> {
+
+export const Inicio = () => {
     return(
-    <div className = "inicio- top">
-      <h1>inicio</h1>
-      <h2>miraaa</h2>
-    </div>
+        <div className= "main-site" >
+        <img src={inicio_back} className="img-fluid" />
+        </div>
+  
     )
     }
-export default Inicio;
+;

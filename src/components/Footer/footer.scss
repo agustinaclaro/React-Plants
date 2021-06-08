@@ -1,0 +1,30 @@
+.footer_global {
+    background-color: rgb(39, 174, 95);
+}
+.footer_ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+li {
+    margin: 0.5rem 0.5rem;
+    a {
+        text-decoration: none;
+        color: black;
+        height: 5rem;
+    }
+        .logo_Footer {
+            margin-left: 2rem;
+            margin-right: 2rem;
+            padding: 40px 5px;
+            color:#91c788;
+        
+    }
+}
+
+.contacto_redes {
+    text-align: center;
+}
+.copyright {
+    text-align: center;
+}
