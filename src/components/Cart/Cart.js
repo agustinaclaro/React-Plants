@@ -21,7 +21,7 @@ export const Cart = () => {
                         </CartItem>
                     )}
                     <p className="total_Cart">Total Compra: <span>${totalPriceCart()}</span></p>
-                    
+
                     <div className="RemoveAllContainer">
                         <button className="btn_Remove"
                             onClick={() => clear()}>Borrar Todo</button>
@@ -30,7 +30,7 @@ export const Cart = () => {
                 </Fragment> 
                   
                 <div className="cartEmptyContainer">
-                    <p> El carrito se encuentra vacio</p>
+                   
                     <Link to='/'><button className="btn_go_Home">Volver al inicio</button>
                     </Link>
             

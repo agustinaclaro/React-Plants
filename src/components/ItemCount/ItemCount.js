@@ -1,4 +1,4 @@
-import 'ItemCount.scss'
+import './ItemCount.scss'
 import {useState} from 'react'
 
 const ItemCounter =({stock,initial,})=>{   

@@ -3,7 +3,6 @@ import { useState, useEffect, useContext } from 'react';
 import { useParams } from "react-router-dom";
 import { getProductById } from '../../services/products';
 import ItemCounter from '../ItemCount/ItemCount.js';
-import { Link } from 'react-router-dom'
 import { CartContext } from '../../Context/CartContext'
 
 const ProductDetail = () => {
