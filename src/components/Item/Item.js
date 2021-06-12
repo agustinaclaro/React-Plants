@@ -5,10 +5,6 @@ import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 
-
-
-
-
 const Item = (item) => {
     return (
         <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">

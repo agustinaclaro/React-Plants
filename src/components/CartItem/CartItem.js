@@ -7,7 +7,9 @@ import { CartContext } from '../../Context/CartContext'
 
 export const CartItem = ({item,quantity,showButtonRemove}) => {
     const {removeItem} = useContext(CartContext)
+  
     
+
     const totalCartItem = (price,quantity) => price * quantity
 
 return(
@@ -17,9 +19,9 @@ return(
         </div>
         <div className="cart_detail">
             <h3>{item.title}</h3>
-            <h4>Precio :{item.price}</h4>
+            <h4>Precio $:{item.price}</h4>
             <p>Cantidad:{quantity}</p>
-            <p>SubTotal: ${totalCartItem(item.price,quantity)}</p>
+            <p>SubTotal: <span> ${totalCartItem(item.price , quantity)} </span></p>
         </div>
         <div>
         {showButtonRemove &&

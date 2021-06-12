@@ -1,0 +1,29 @@
+.btn-productDetail {
+    margin: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .btn-addProduct {
+        width: 3rem;
+        height: 1.5rem;
+        background-color: #52734d;
+        color: white;
+        border-radius: 0.3rem;
+        border: none;
+        justify-content: center;
+    }
+    .btn-text {
+        width: 3rem;
+        height: 2rem;
+        background-color: rgb(218, 218, 218);
+        border-radius: 0.3rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0.2rem;
+        justify-content: center;
+    }
+}

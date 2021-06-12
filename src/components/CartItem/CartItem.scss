@@ -1,33 +1,37 @@
-.cartItem{
+.cart_item{
     display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
     justify-content: space-between;
 	align-items: center;
 	align-content: stretch;
-    border-radius: 10px;
+    border: 1px;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 5px;
     margin: 10px;
     padding:10px;
-    background-color: rgba(128, 128, 128, 0.205);
 }
 .cart_detail{
     width:50%;
 }
 .Img_itemCart{
-    width:150px;
-    height: 150px;
+    width:250px;
+    height: auto;
     background-size: cover;
 }
 .btn_Remove_Item{
     height: 24px;
-    background-color: rgba(170, 15, 15, 0.884);
+    background-color: rgb(255, 53, 53);
     width: 24px;
     display: block;
-    border: none;
+    border:  rgb(255, 53, 53);
+    border-radius: 10px;
+    font-weight: 400;
+   float: left;
+    
 }
 .btn_Remove_Item:hover{
     transition: .5s;
-    background-color: rgba(161, 12, 12, 0.884);
+    background-color: rgba(79, 161, 12, 0.884);
 
-    
 }
