@@ -1,56 +1,38 @@
 
 import Item from '../Item/Item';
 import './ItemList.scss';
-import { useHistory, useParams } from 'react-router-dom';
-import { useContext, useEffect } from 'react';
+import {  useState,useContext, useEffect } from 'react';
 import { CartContext } from '../../Context/CartContext'
 import { getFirestore } from '../../firebase';
 
 const ItemList = ({ products = [] }) => {
    
     const { addItem } = useContext(CartContext)
-    const [product, setProduct]= useStaete([])
-    const [isLoading, setIsLoading] = useState(true)
+    const [product, setProduct]= useState([])
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(()=>{
         const db=getFirestore
-        const ItemColection= db.colection('products')
-        ItemColection.get().then(
-            (querySnapshot)=>{
-                if(querySnapshot.size =0){
-
-                }
-            }
+        const ItemColection = db.colection('products')
+        ItemColection.get()
+        .then((querySnapshot)=>{
+                if(querySnapshot.size ===0)
+                    setProduct(querySnapshot.docs.map((doc) => (doc.data())))
+                
+            }).catch(
+                (error) => console.error("Firestore error:" , error)
         )
 
     },[])
 
-    useEffect(() => {
-        setIsLoading(true)
-        const db= getFirestore()
-        const itemCollection = db.collection("items")
-        itemCollection.get().then((querySnapshot) => {
-                if (querySnapshot === 0) {
-                    console.log('No results')
-                }
-        setItems(getCategoryId(querySnapshot.docs.map(doc => ({id:doc.id,...doc.data()}))))  
-        }).catch((error)=>{
-            console.log('Error',error)
-        }).finally(()=> setIsLoading(false))
-        
-    }, [categoryId])
-
-
-
-
     return (
         <div className="cards-group">
-            {products.map((product) => (
+            {products.map((products) => (
                 <Item
-                    key={product.id}
-                    title={product.title}
-                    price = {product.price}
-                    imgUrl={product.imgUrl}
+                    key={products.id}
+                    title={products.title}
+                    price = {products.price}
+                    imgUrl={products.imgUrl}
                     onImageClick={() => (`/products/${product.id}`)}
                     onAddtoCart={() => addItem(product, 1)}
                 />
