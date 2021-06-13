@@ -1,6 +1,6 @@
 import { createContext,useState} from 'react'
 import emailjs from 'emailjs-com'
-import stages from '../service/stages.json'
+import stages from '../services/stages.json'
 
 
 export const OrderContext = createContext()

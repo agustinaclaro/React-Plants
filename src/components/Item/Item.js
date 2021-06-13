@@ -6,7 +6,7 @@ import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
 import {CartContext} from '../../Context/CartContext'
 import{useContext} from 'react'
 import {Link} from 'react-router-dom'
-import { getProducts } from '../../services/products';
+
 
 
 
