@@ -3,9 +3,16 @@ import './Item.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
+import {CartContext} from '../../Context/CartContext'
+import{useContext} from 'react'
+import {Link} from 'react-router-dom'
+import { getProducts } from '../../services/products';
 
 
-const Item = (item) => {
+
+const Item = ({item}) => {
+    const { addItem } = useContext(CartContext)
+    console.log(item)
     return (
         <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
             <div id={item.id} className="card">
@@ -13,11 +20,11 @@ const Item = (item) => {
                 <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
                     <p className="card-text">{item.price}</p>
-
+                    <Link to= {`/products/${item.id}`}>
                     <button id="cart-button-view" onClick={item.onImageClick} className="btn-cart-view" data-toggle="modal">
                         < FontAwesomeIcon icon={faEye} className="logo-view" />
-                    </button>
-                    <button id="cart-button-cart" onClick={item.onAddtoCart} className="btn-cart-card" data-toggle="modal">
+                    </button> </Link>
+                    <button id="cart-button-cart" onClick={() => addItem(item, 1)} className="btn-cart-card" data-toggle="modal">
                         < FontAwesomeIcon icon={faCartArrowDown} className="logo-cart-card" />
                     </button>
                 </div>
@@ -25,6 +32,7 @@ const Item = (item) => {
             </div>
 
         </div>
+    
     )
 };
 export default Item;

@@ -12,12 +12,12 @@ const ItemList = ({ products = [] }) => {
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(()=>{
-        const db=getFirestore
-        const ItemColection = db.colection('products')
+        const db=getFirestore()
+        const ItemColection = db.collection('products')
         ItemColection.get()
         .then((querySnapshot)=>{
-                if(querySnapshot.size ===0)
-                    setProduct(querySnapshot.docs.map((doc) => (doc.data())))
+                if(querySnapshot.size ===0){}
+                    setProduct(querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})))
                 
             }).catch(
                 (error) => console.error("Firestore error:" , error)
@@ -30,11 +30,7 @@ const ItemList = ({ products = [] }) => {
             {products.map((products) => (
                 <Item
                     key={products.id}
-                    title={products.title}
-                    price = {products.price}
-                    imgUrl={products.imgUrl}
-                    onImageClick={() => (`/products/${product.id}`)}
-                    onAddtoCart={() => addItem(product, 1)}
+                   item={products}
                 />
             ))}
         </div>

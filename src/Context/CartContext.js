@@ -18,14 +18,14 @@ export const CartProvider = ({ children }) => {
         return findItem 
     }
     
-    const addItem = (product, qty) => {
+    const addItem = (products, qty) => {
        
-        if (item(product.id) >= 0) {
-            cart[item(product.id)].quantity += qty
+        if (item(products.id) >= 0) {
+            cart[item(products.id)].quantity += qty
             item(cart)
         } else {
             setCart([...cart, {
-                item:product,
+                item:products,
                 quantity: qty
               
             }])      
