@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { Form } from "../form/Form"
-import { Cart } from "./CartList"
+import { Form } from "../form/form"
+import { Cart } from "../Cart/Cart"
+import './CartContainer.scss'
 
-import "./cart.scss"
 
 
 export const CartContainer = ( ) => {
