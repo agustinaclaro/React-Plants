@@ -25,6 +25,7 @@ const ItemList = ({ products = [] }) => {
     },[])
 
     return (
+       
         <div className="cards-group">
             {products.map((products) => (
                 <Item
@@ -33,6 +34,7 @@ const ItemList = ({ products = [] }) => {
                 />
             ))}
         </div>
+       
     );
 };
 

@@ -16,6 +16,7 @@ import { CartProvider } from './Context/CartContext';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import TitleFront from './components/TitleFront/TitleFront';
 import Footer from './components/Footer/footer';
+import {OrderBuy} from './components/Order/order'
 
 
 
@@ -35,6 +36,7 @@ function App() {
             <Route exact path='/'>
               <Inicio />
             </Route>
+            <Route path="/cartCheckout" component={OrderBuy} />
             <Route path='/cart'>
               <Cart />
             </Route>
