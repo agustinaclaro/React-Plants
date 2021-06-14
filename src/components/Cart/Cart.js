@@ -5,7 +5,7 @@ import { CartItem } from '../CartItem/CartItem'
 import {Link} from 'react-router-dom'
 
 
-export const Cart = ({setShowForm}) => {
+export const Cart = ( {setShowForm}) => {
     const { cart, clear, totalPriceCart} = useContext(CartContext)
     
     return (
@@ -26,9 +26,8 @@ export const Cart = ({setShowForm}) => {
                   )}
                      <div className="cart-checkout">
                     <p className="total_Cart container">Total Compra: <span>${totalPriceCart()}</span></p>
-                            
-                     <button className="checkOut-button" onClick={() => setShowForm(true)}>Checkout</button>
-                    </div> 
+                    <button className="checkOut-button" onClick={() => setShowForm(true)}>CHECKOUT</button>
+                     </div>       
 
  
                 </Fragment> 

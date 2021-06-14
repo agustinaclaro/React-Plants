@@ -4,7 +4,6 @@ import { Input } from "../../components/input/Input"
 import { CartContext } from "../../context/cartContext"
 import { getFirestore } from "../../firebase"
 import firebase from 'firebase/app'
-import "./form.scss"
 import { Link } from "react-router-dom"
 
 export const Form = () => {
@@ -65,10 +64,7 @@ export const Form = () => {
         batch.commit().then( (r) => console.log(r)  )
 
             setCart([])
-           
-        
     }
-
 
     const { name, surname, phone, email } = form
 

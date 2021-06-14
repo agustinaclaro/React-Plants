@@ -17,6 +17,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import TitleFront from './components/TitleFront/TitleFront';
 import Footer from './components/Footer/footer';
 import {OrderBuy} from './components/Order/order'
+import { CartContainer } from './components/CartContainer/CartContainer';
 
 
 
@@ -38,7 +39,7 @@ function App() {
             </Route>
             <Route path="/cartCheckout" component={OrderBuy} />
             <Route path='/cart'>
-              <Cart />
+              <CartContainer />
             </Route>
             <Route path='/category/:categoryId'>
               <ItemListContainer />
