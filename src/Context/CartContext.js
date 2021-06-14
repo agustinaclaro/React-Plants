@@ -1,32 +1,25 @@
 import { createContext } from 'react'
 import { useState } from 'react'
 
-
-
 export const CartContext = createContext()
 
 export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([])
     const [totalItems, setTotalItems] = useState(0)
+    const [order, setOrder] = useState('')
 
     const addElements = (array) => array.reduce((a, b) => a + b, 0)
 
-
-    const item = id => cart.find(product => product.id === id);
+    const item = id => cart.find(product => product.item.id === id);
 
     const addItem = (products, qty) => {
-      const newCart = [...cart]
-      console.log(products)
-      console.log(cart.find(product => product.id === product.id))
+      const newCart = [...cart];
+
       if(item(products.id)) {
-        console.log('entre en el if')
-        console.log(newCart.findIndex(item => item.id === products.id))
-        console.log(newCart.indexOf(item => item.id === products.id))
-        newCart[newCart.findIndex(item => item.id === products.id)].quantity += qty;
+        newCart[newCart.findIndex(product => product.item.id === products.id)].quantity += qty;
         setCart(newCart);
       } else {
-        console.log('entre en else')
         setCart([
           ...newCart,
           {

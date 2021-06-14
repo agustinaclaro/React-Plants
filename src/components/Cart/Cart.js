@@ -11,7 +11,7 @@ export const Cart = () => {
     
     return (
         <div className="cart_body">
-            <h2 className="cartTitle">Carrito</h2>
+            <h2 className="cartTitle container">Carrito</h2>
         
                 <Fragment>
                   
@@ -20,18 +20,19 @@ export const Cart = () => {
                             quantity={quantity} showButtonRemove={true}>
                         </CartItem>
                     )}
-                    <p className="total_Cart">Total Compra: <span>${totalPriceCart()}</span></p>
+                    <p className="total_Cart container">Total Compra: <span>${totalPriceCart()}</span></p>
 
-                    <div className="RemoveAllContainer">
+                    <div className="RemoveAllContainer container">
                         <button className="btn_Remove"
                             onClick={() => clear()}>Borrar Todo</button>
                     </div>
 
                 </Fragment> 
                   
-                <div className="cartEmptyContainer">
+                <div className="cartEmptyContainer container">
                    
-                    <Link to='/'><button className="btn_go_Home">Volver al inicio</button>
+                    <Link to='/products'>
+                        <button className="btn_go_Home">Volver al inicio</button>
                     </Link>
             
                 </div>

@@ -1,0 +1,17 @@
+.buttonAddContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0.5rem 0;
+    .buttonAdd {
+        width: 8rem;
+        height: 1.2em;
+        background-color: rgb(41, 162, 99);
+        border-radius: 0.3rem;
+        border: none;
+        color: white;
+        font-size: 0.8rem;
+        padding-bottom: 1.2rem;
+        align-items: center;
+    }
+    }
