@@ -8,7 +8,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
 } from "react-router-dom"
 
 import { Inicio } from './components/Inicio/Inicio';
@@ -28,7 +27,6 @@ function App() {
  
   return (
     <div className="App">
-
       <Router>
         <CartProvider>
           <Navbar />

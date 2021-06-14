@@ -2,12 +2,11 @@
 import Item from '../Item/Item';
 import './ItemList.scss';
 import {  useState,useContext, useEffect } from 'react';
-import { CartContext } from '../../Context/CartContext'
 import { getFirestore } from '../../firebase';
 
 const ItemList = ({ products = [] }) => {
    
-    const { addItem } = useContext(CartContext)
+   
     const [product, setProduct]= useState([])
     const [isLoading, setIsLoading] = useState(false)
 
