@@ -34,23 +34,7 @@
             }
 
         }
-        .btn-cart-card {
-            margin-left: 0.5rem;
-            margin-bottom: 0.2rem;
-            background-color: rgb(41, 162, 99);
-            height: 2rem;
-            width: 2rem;
-            border-radius: 0.2rem;
-            border: none;
-            align-items: center;
-            margin: 0;   
-            .logo-cart-card {
-                color:white;
-                width: 1.5rem;
-                height: 1.5rem;
-                
-                padding: 0.2rem;
-            }
+       
         }
         .card-title {
             margin: 0.2rem;
@@ -62,4 +46,74 @@
             font-weight: 600;
         }
     }
-}
+
+.finishBuy{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    .btn-finishBuy{
+        width: 10rem;
+            height: 1.2rem;
+            background-color: #fc7622;
+            border-radius: 0.3rem;
+            border: none;
+            color: white;
+            font-size: 0.8rem;
+    
+    }
+    }
+    .buttonAddContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+        .buttonAdd {
+            width: 8rem;
+            height: 1rem;
+            background-color: rgb(41, 162, 99);
+            border-radius: 0.3rem;
+            border: none;
+            color: white;
+            font-size: 0.8rem;
+        }
+    
+        
+        }
+        .btn-productDetail {
+            margin: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .btn-addProduct {
+                width: 2rem;
+                height: 1rem;
+                background-color: whitesmoke;;
+                color: rgb(41, 162, 99);
+                border-radius: 0.3rem;
+                border: none;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                font-weight: 400;
+            }
+            .btn-text {
+                width: 2rem;
+                height: 1rem;
+                padding-bottom: 0.2rem;
+                background-color: whitesmoke;
+                border-radius: 0.3rem;
+                align-items: center;
+                font-size: 1rem;
+                font-weight: 600;
+                margin:0.2 0.2rem;
+                justify-content: center;
+                
+            }
+        }
+    

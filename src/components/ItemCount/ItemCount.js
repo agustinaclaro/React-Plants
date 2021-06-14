@@ -1,7 +1,9 @@
 import './ItemCount.scss'
 import {useState} from 'react'
 
-const ItemCounter =({stock,initial,})=>{   
+
+const ItemCounter =({stock,initial,onAdd})=>{   
+   
 
     const [count, setCount] = useState(initial)
         
@@ -26,6 +28,9 @@ const ItemCounter =({stock,initial,})=>{
                         <span className="btn-text numberCount" >{count}</span>
                         <input type="button" value="+" className="btn-addProduct decrement"disabled={disabledButtonAdd()} onClick={increment}/>
                     </div>
+                    <div className="buttonAddContainer">
+                    <button className="buttonAdd" onClick={() => {onAdd(count)}} > Agregar al carrito </button>
+                </div>
 
              
             </div>

@@ -1,36 +1,50 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-import { getProductCategoryId, getProducts } from '../../services/products';
 import CategoryLink from '../CategoryLink/CategoryLink'
+import {getFirestore} from '../../firebase/index'
+
+
 
 import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = () => {
     const { categoryId } = useParams();
-    const [products, setProducts] = useState([]);
-
+    const [productItem, setProductsItem] = useState([]);
+    
     useEffect(() => {
-        const getProductsList = () => {
-            if (categoryId) {
-                getProductCategoryId(categoryId)
-                    .then((data) => setProducts(data))
-                    .catch((error) => console.error('HUBO UN ERROR: ', error))
-            } else {
-                getProducts()
-                    .then((data) => setProducts(data))
-                    .catch((error) => console.error('HUBO UN ERROR: ', error))
-            }
+        const db = getFirestore();
+        const itemCollection = db.collection('products');
+    
+        if(categoryId) {
+            const filteredProd = itemCollection.where("categoryId", "==", categoryId);
+            filteredProd.get().then(querySnapshot => {
+                if(querySnapshot === 0) {
+                    console.log('no results');
+                }
+    
+                setProductsItem(querySnapshot.docs.map(doc => ({ id:doc.id, ...doc.data() })))
+            }).catch(error => {
+                console.log(error)
+            })
+        } else {
+            itemCollection.get().then(querySnapshot => {
+                if(querySnapshot === 0) {
+                    console.log('no results');
+                }
+    
+                setProductsItem(querySnapshot.docs.map(doc => ({ id:doc.id, ...doc.data() })))
+            }).catch(error => {
+                console.log(error)
+            })
         }
-
-        getProductsList();
-    }, [categoryId]);
+    }, [categoryId])
 
 
     return (
         <div className="itemListContainer">
             <CategoryLink />
-            <ItemList products={products}/>
+            <ItemList products={productItem}/>
         </div>
     )
 }

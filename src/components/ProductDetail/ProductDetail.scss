@@ -53,22 +53,15 @@
     }
 
 
-.buttonAddContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem 0;
-    .buttonAdd {
-        width: 10rem;
-        height: 1.2rem;
-        background-color: #52734d;
-        border-radius: 0.3rem;
-        border: none;
-        color: white;
-        font-size: 0.8rem;
-    }
 
-    
-    }
+}
+.buttonAddpd {
+    background-color: rgb(41, 162, 99);
+    color: whitesmoke;
+    font-size: inherit;
+    line-height: inherit;
+    border: none;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+
 }
