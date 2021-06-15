@@ -16,7 +16,7 @@ export const CartContainer = ( ) => {
  
         <section className="cart">
             <div className="container">
-                <div className="row">
+                <div className="colum">
                   
                    { showForm ? 
                     
@@ -24,7 +24,6 @@ export const CartContainer = ( ) => {
                         <Cart showForm={showForm} setShowForm={setShowForm} /> 
                         
                    }
-
                    
                </div> 
             </div>

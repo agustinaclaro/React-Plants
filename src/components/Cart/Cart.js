@@ -2,7 +2,7 @@ import './Cart.scss'
 import { Fragment, useContext } from 'react';
 import { CartContext } from '../../Context/CartContext'
 import { CartItem } from '../CartItem/CartItem'
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom"
 
 
 export const Cart = ( {setShowForm}) => {
@@ -13,8 +13,8 @@ export const Cart = ( {setShowForm}) => {
             {cart.length > 0 ? (
                 <Fragment> 
                   
-                     <h2 className="cartTitle container">Carrito</h2>
-                     <div className="RemoveAllContainer container">
+                     <h2 className="cartTitle ">Carrito</h2>
+                     <div className="RemoveAllContainer ">
                         <button className="btn_Remove"
                             onClick={() => clear()}>Borrar Todo</button>
                     </div>
@@ -29,7 +29,7 @@ export const Cart = ( {setShowForm}) => {
                     <button className="checkOut-button" onClick={() => setShowForm(true)}>CHECKOUT</button>
                      </div>       
 
- 
+         
                 </Fragment> 
 
                 ) : (

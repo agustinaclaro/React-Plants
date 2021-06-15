@@ -1,6 +1,5 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
-
 import './App.scss';
 import Navbar from './components/navbar/navbar';
 import ProductDetail from './components/ProductDetail/ProductDetail';
@@ -9,21 +8,13 @@ import {
   Switch,
   Route,
 } from "react-router-dom"
-
 import { Inicio } from './components/Inicio/Inicio';
-import { Cart } from './components/Cart/Cart';
 import { CartProvider } from './Context/CartContext';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import TitleFront from './components/TitleFront/TitleFront';
 import Footer from './components/Footer/footer';
 import {OrderBuy} from './components/Order/order'
 import { CartContainer } from './components/CartContainer/CartContainer';
-
-
-
-
-
-
 
 function App() {
  
