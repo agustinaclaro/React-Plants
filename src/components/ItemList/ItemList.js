@@ -1,14 +1,14 @@
 
 import Item from '../Item/Item';
 import './ItemList.scss';
-import {  useState,useContext, useEffect } from 'react';
+import {  useState, useEffect } from 'react';
 import { getFirestore } from '../../firebase';
 
 const ItemList = ({ products = [] }) => {
    
    
     const [product, setProduct]= useState([])
-    const [isLoading, setIsLoading] = useState(false)
+
 
     useEffect(()=>{
         const db=getFirestore()
@@ -25,6 +25,7 @@ const ItemList = ({ products = [] }) => {
     },[])
 
     return (
+       
         <div className="cards-group">
             {products.map((products) => (
                 <Item
@@ -33,6 +34,7 @@ const ItemList = ({ products = [] }) => {
                 />
             ))}
         </div>
+       
     );
 };
 

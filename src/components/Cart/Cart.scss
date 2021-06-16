@@ -1,3 +1,7 @@
+
+
+.cartEmptyContainer{
+    text-align: center;
 .btn_go_Home{
     color:whitesmoke;
     border-color: rgb(41, 162, 99);
@@ -6,21 +10,40 @@
     border-radius: 0.3rem;
     background-color:rgb(41, 162, 99);
     padding: 2px;
- 
+    
+}}
 
-}
 .total_Cart{
     font-weight: 500;
     float: right;
+    padding-right: 1rem;
+    margin-right: 1rem;
+}
+.RemoveAllContainer{
+    text-align: center;
 }
 .btn_Remove{
     color:whitesmoke;
     border-color: rgb(255, 53, 53);
     font-weight: 400;
     margin-bottom: 10px;
+    margin-left: 3rem;
     border-radius: 0.3rem;
     background-color:rgb(255, 53, 53);
     padding: 2px;
- 
-
+    
+}
+.cartTitle{
+ padding-left: 1rem;
+}
+.checkOut-button{
+    padding: 0.5rem;
+    background-color: rgb(41, 162, 99);
+    color: white;
+    border-radius: 0.3rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    margin: 0.5rem;
+    border: none;
 }

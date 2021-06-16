@@ -13,7 +13,7 @@ const ProductDetail = () => {
      if(id){ 
     const db=getFirestore()
     db.collection('products').doc(id).get()
-        .then(snapshot => setProduct(snapshot.data()))
+        .then(snapshot => setProduct({ id:snapshot.id, ...snapshot.data() }))
           .catch(
                     (error) => console.error("Firestore error:" , error)
             )
@@ -28,7 +28,7 @@ const ProductDetail = () => {
                 <h5 className="card-title-pd">{product?.title}</h5>
                 <p className="card-text-pd">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente iste iure deserunt accusamus bland iste iure deserunt accusamus blanditiis a provident dolorem fugiat laborum ipsum modi amet, quod suscipit veniam. !</p>
                 <p className="card-price-pd">precio $:{product?.price}</p>
-                
+
                 <button id="cart-button-cart" onClick={()=>addItem(product,1)}className="buttonAddpd numbercou " data-toggle="modal">
                        AGREGAR AL CARRITO
                     </button>
