@@ -1,20 +1,20 @@
-  
 import { Fragment, useContext, useEffect, useState } from "react"
-import { Input } from "../input/input"
+import { Input } from "../../components/input/input"
 import { CartContext } from "../../Context/CartContext"
 import { getFirestore } from "../../firebase"
 import firebase from 'firebase/app'
+import "./form.scss"
 import { Link } from "react-router-dom"
-import './form.scss'
 
 export const Form = () => {
 
-    const { cart,  setCart,  totalPriceCart, setOrder, clear } = useContext(CartContext)
+    const { cart,  setCart, totalPriceCart, setOrder } = useContext(CartContext)
 
     const [form, setForm] = useState ({
         name: '', surname: '', email:'', phone: ''
     })
 
+  
     const [isDisabled, setIsDisabled] = useState(true)
    
     const formFields = [
@@ -56,15 +56,19 @@ export const Form = () => {
         const db = getFirestore()
         const batch = db.batch()
 
-        cart.forEach((product) => {
-            const productRef = db.collection('products').doc(product.id)
-            batch.update(productRef, { stock: product.stock - product.quantity})
+        cart.forEach((item) => {
+            const itemRef = db.collection("items").doc(item.id)
+            batch.update(itemRef, { stock: item.stock - item.quantity})
+
         })
 
         batch.commit().then( (r) => console.log(r)  )
 
-         setCart([])
+            setCart([])
+           
+        
     }
+
 
     const { name, surname, phone, email } = form
 
@@ -72,33 +76,35 @@ export const Form = () => {
        
         const newForm = { ...form, [id]: value }
         setForm(newForm)
+
+
     }
-   
 
     const orderCart = () => {
-        
+      
         const db = getFirestore()
-        const ordersCollection = db.collection("orders").add( { 
-            
-            buyer: {name, surname, email, phone},
-          cart,
-        
-            total: totalPriceCart()
+        const ordersCollection = db.collection("orders")
 
+      const items = cart.map(product => ( {id: product.id, title: product.title, price: product.price, quantity: product.quantity} ))
+  
+        const newOrder = {
+         buyer: {name, surname, email, phone},
+         items: items, 
+         date: firebase.firestore.Timestamp.fromDate(new Date ()),
+         total: totalCartPrice()
+        }
+
+        ordersCollection.add(newOrder).then(({id}) => {
+            setOrder(id)
            
-        }).then(({id})=> {
-            setOrder(id) ;
-            clear();
-            
-        
+          
         }).catch((error) => {
             console.log('Hubo un error al crear la orden', error);
         }).finally(stockUpdate())
        
+         console.log("newOrder:", newOrder)
             
     }
-
-
 
     useEffect ( () => {
 
@@ -106,10 +112,13 @@ export const Form = () => {
       let patternEmail = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/
       let patternPhone = /^[0-9- ]{8,15}$/
       const disableButton = (!patternName.test(name) || !patternName.test(surname) || !patternEmail.test(email) || !patternPhone.test(phone) || [name.trim(), surname.trim(), email.trim(), phone.trim()].includes(''))
-
+      
         setIsDisabled(disableButton)
       
+
     },[form])
+
+    
 
     return (
         <Fragment>
@@ -125,19 +134,25 @@ export const Form = () => {
                  {formFields.map(({ id, label, value, type, placeholder }) => (
                         <Input 
                             key={id} id={id} label={label} value={value} type={type} onChange={handleForm} placeholder={placeholder}
-                        />  
-                  ) )} 
+                        />
+                        
+                        )
+
+                        )
+                    } 
                     
-            </form> 
+            </form>
+           
             <div className="button-finish-container">
            
             <Link to="/cartCheckOut">
-           <button type="submit" className="btn_submit" onClick={orderCart} disabled={isDisabled}>CONFIRMAR COMPRA</button>
+           <button type="submit" onClick={orderCart} disabled={isDisabled}>CONFIRMAR COMPRA</button>
            </Link>
-            </div>    
+            </div>  
         </div>          
         </Fragment>
                
 
     )
- }
+
+}
