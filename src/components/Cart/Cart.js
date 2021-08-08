@@ -14,16 +14,16 @@ export const Cart = ( {setShowForm}) => {
                 <Fragment> 
                   
                      <h2 className="cartTitle ">Carrito</h2>
-                     <div className="RemoveAllContainer ">
-                        <button className="btn_Remove"
-                            onClick={() => clear()}>Borrar Todo</button>
-                    </div>
-        
                     {cart.map(({ item, quantity }) =>
                         <CartItem key={item.title} item={item}
-                            quantity={quantity} showButtonRemove={true}>
+                        quantity={quantity} showButtonRemove={true}>
                         </CartItem>
                   )}
+                                 <div className="RemoveAllContainer ">
+                                    <button className="btn_Remove"
+                                        onClick={() => clear()}>Borrar Todo</button>
+                                </div>
+                    
                      <div className="cart-checkout">
                     <p className="total_Cart container">Total Compra: <span>${totalPriceCart()}</span></p>
                     <button className="checkOut-button" onClick={() => setShowForm(true)}>CHECKOUT</button>
