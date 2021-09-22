@@ -1,26 +1,33 @@
+
+
+
 .navbar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(54, 121, 86);
+
+    background-color:rgb(54, 121, 86);
     color: #91c788;
-    
+    margin: 0;
+    padding: 0 0 2 0 ;
+    height: 60px;
 
     .ul-links {
         display: flex;
         list-style-type: none;
-        text-align: center;
-        padding-top: 1rem;
-       
+        align-items: center; 
+        padding: 5 0 0 0;
+        
+    .item-link a{
+       padding-bottom: 5px;
+        margin: 0;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #f2f8f1;
+        justify-content: center;
+        letter-spacing: 2px;
+}
 
-    .item-link a {
-        float: left;
-        margin: 10px;
-        text-decoration: none;
-        color: #91c788;
-        align-items: center;
-        }
-    }
+}
+    
 
     .logo_white {
         width:60px;
@@ -30,11 +37,12 @@
 .nav-cart {
     align-items: center;
     display: flex;
-    margin: 0;
+    margin:  0 0 2 0;
+    padding:0 ;
 
     .in-navbar {
         width: 4rem;
-        height: 1.5rem;
+        height: 1.2rem;
         border-radius: 0.2rem;
         border: none;
         margin-right: 0.5rem;
@@ -44,12 +52,13 @@
 
     .btn-cart {
         background-color: rgb(41, 162, 99);
-        height: 2.5rem;
-        width: 2.5rem;
+        height: 2.2rem;
+        width: 2.2rem;
         border-radius: 0.2rem;
         border: none;
         align-items: center;
         margin: 0;
+        
     }
     .logoCartNav {
         height: 1.4rem;

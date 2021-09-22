@@ -42,7 +42,7 @@ const ItemListContainer = () => {
 
 
     return (
-        <div className="itemListContainer">
+        <div className="itemListContainer container">
             <CategoryLink />
             <ItemList products={productItem}/>
         </div>

@@ -2,7 +2,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.scss';
 import Navbar from './components/navbar/navbar';
-import ProductDetail from './components/ProductDetail/ProductDetail';
+import ContainerProductDetail from './components/ContainerProductDetail/containerPd';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,7 +19,7 @@ import { CartContainer } from './components/CartContainer/CartContainer';
 function App() {
  
   return (
-    <div className="App">
+    <div className="App container">
       <Router>
         <CartProvider>
           <Navbar />
@@ -36,7 +36,7 @@ function App() {
               <ItemListContainer />
             </Route>
             <Route path="/products/:id">
-              <ProductDetail />
+              <ContainerProductDetail />
             </Route>
             <Route path="/products">
               <ItemListContainer />

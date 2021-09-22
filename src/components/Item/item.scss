@@ -4,16 +4,18 @@
 }
 
 .card {
-    margin: 20px;
+    margin: 10px 0px 10px 0px;
     border: 1px;
     box-shadow: 5px 10px 18px #888888;
     border-radius: 5px;
-    width: 15rem;
-    justify-content: space-around;
+    width: 14rem;
+    align-items: center;
     
+  
     .card-body {
         text-align: center;
         align-items: center;
+       
         .btn-cart-view {
             margin-right: 0.5rem;
             margin-bottom: 0.5rem;
@@ -23,6 +25,7 @@
             border-radius: 0.2rem;
             border: none;
             align-items: center;
+            text-decoration: none;
             &:hover {
                 background-color: rgb(5, 91, 117);
             }
@@ -44,57 +47,29 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
+       
+    }
+    .btn-cart-card {
+        margin-left: 0.5rem;
+        margin-bottom: 0.2rem;
+        background-color: rgb(41, 162, 99);
+        height: 2rem;
+        width: 2rem;
+        border-radius: 0.2rem;
+        border: none;
+        align-items: center;
+        &:hover {
+            background-color:rgb(202, 1, 1);
+        }
+        
+        .logo-cart-card {
+            color:white;
+            width: 1.5rem;
+            height: 1.5rem;
+            padding: 0.2rem;
+        }
     }
 
-.finishBuy{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem 0;
-    .btn-finishBuy{
-        width: 10rem;
-            height: 1.2rem;
-            background-color: #fc7622;
-            border-radius: 0.3rem;
-            border: none;
-            color: white;
-            font-size: 0.8rem;
-    
-    }
-    }
-        .btn-productDetail {
-            margin:0 1.2rem 1.2rem 1.2rem ;
-            padding-left: 1.2rem;
-            padding-right: 1.2rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            .btn-addProduct {
-                width: 2rem;
-                height: 1.5rem;
-                background-color: white;;
-                color: rgb(41, 162, 99);
-                border-radius: 0.3rem;
-                justify-content: center;
-                align-items: center;
-                font-weight: 900;
-                margin: 0.5rem;
-                border: none;
-            }
-            .btn-text {
-                width: 2rem;
-                height: 1rem;
-                padding-bottom: 0.2rem;
-                background-color: white;
-                border-radius: 0.3rem;
-                align-items: center;
-                font-size: 1rem;
-                font-weight: 600;
-                margin:0.2 0.2rem;
-                justify-content: center;
-                
-            }
-        }
+
+
     

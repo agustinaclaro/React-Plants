@@ -1,5 +1,16 @@
 .cards-group {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;   
+    margin-right: 5px;
+    margin-left: 5px;
+    justify-content: space-between;
+    padding-left: 50px;
+
+    @media (min-width: 340px) {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+   
+    
+   
 }

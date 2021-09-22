@@ -9,20 +9,18 @@ import CardWidgest from '../CartWidgest/CartWidgest';
 
 const Navbar = () => {
   return (
-    <header>
-   <nav className="navbar container">
-   
-    <NavLink  to= '/'><img src={logo_white} className="logo_white " alt="logo site"/></NavLink>  
+    <header className="container">
+      <nav className="navbar" expand="lg">
     
-     <ul className="ul-links">
-       <li className="item-link" ><NavLink exact to="/">Inicio</NavLink></li>
-       <li className="item-link"  ><NavLink to="/products"> productos</NavLink></li>
-       <li className="item-link"  > <NavLink to ={"/cart"}><CardWidgest /> </NavLink></li>
-     </ul>
-     </nav> 
-  </header>
-   
-    )
+        <ul className="ul-links">
+          <li className="item-link" ><NavLink exact to="/">INICIO</NavLink></li>
+          <li className="item-link"  ><NavLink to="/products"> PRODUCTOS</NavLink></li>
+        </ul>
+        <NavLink to={"/cart"}><CardWidgest /> </NavLink>
+      </nav>
+    </header>
+
+  )
 }
 
 
