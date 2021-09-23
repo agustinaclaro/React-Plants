@@ -1,10 +1,7 @@
-import logo_white from '../../logo_white.png';
+import logo_white from '../../Assets/logo_white.png';
 import './navbar.scss';
 import { NavLink } from "react-router-dom"
-import CardWidgest from '../CartWidgest/CartWidgest';
-
-
-
+import CardWidgest from '../CartWidgest/CartWidgest'
 
 
 const Navbar = () => {

@@ -1,5 +1,5 @@
 import './Inicio.scss'
-import inicio_back from '../../inicio_back.jpg'
+import inicio_back from '../../Assets/inicio_back.png'
 import { Link } from 'react-router-dom'
 
 
