@@ -15,6 +15,7 @@ import TitleFront from './components/TitleFront/TitleFront';
 import Footer from './components/Footer/footer';
 import {OrderBuy} from './components/Order/order'
 import { CartContainer } from './components/CartContainer/CartContainer';
+import {Error} from './components/Error/error'
 
 function App() {
  
@@ -40,6 +41,8 @@ function App() {
             </Route>
             <Route path="/products">
               <ItemListContainer />
+            </Route>
+            <Route component={Error}>
             </Route>
 
           </Switch>
