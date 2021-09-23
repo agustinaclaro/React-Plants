@@ -45,10 +45,6 @@ const ProductDetail = ({product}) => {
             </div>
         
             <img src={product.imgUrl} className="card-img-top-pd" alt="..." />
-<<<<<<< HEAD
-=======
-
->>>>>>> 0b1a0f535314b5b8aa45f25b31ec696315e22b7c
 
         </div>
     )
