@@ -8,7 +8,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom"
-import { Inicio } from './components/Inicio/Inicio';
+import { Inicio } from './components/Inicio/inicio';
 import { CartProvider } from './Context/CartContext';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import TitleFront from './components/TitleFront/TitleFront';
@@ -20,7 +20,7 @@ import {Error} from './components/Error/error'
 function App() {
  
   return (
-    <div className="App container">
+    <div className="App">
       <Router>
         <CartProvider>
           <Navbar />

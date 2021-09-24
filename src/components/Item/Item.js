@@ -1,5 +1,5 @@
 
-import './Item.scss';
+import './item.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
@@ -7,14 +7,12 @@ import {CartContext} from '../../Context/CartContext'
 import{useContext} from 'react'
 import {Link} from 'react-router-dom'
 
-import { useState, useEffect } from 'react';
-
 const Item = ({item}) => {
   
     const { addItem } = useContext(CartContext)
     
     return (
-        <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-xl-4">
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
             <div className="card">
                 <img src={item.imgUrl} className="card-img-top" alt="..." />
                 <div className="card-body">
@@ -29,8 +27,7 @@ const Item = ({item}) => {
                     </button>
                     </div>
             </div>
-        </div>
-        
+        </div>    
     )
 };
 export default Item;

@@ -1,5 +1,6 @@
 import './TitleFront.scss'
-import logo_white from '../../logo_white.png';
+
+import logo_white from '../../Assets/logo_white.png';
 
 const TitleFont = () => {
     return (

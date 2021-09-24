@@ -1,5 +1,5 @@
    
-import {Message} from '../message/message'
+import {Message} from '../Message/message'
 
 export const Error = () =>{
     return(

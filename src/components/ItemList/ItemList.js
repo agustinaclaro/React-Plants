@@ -26,7 +26,7 @@ const ItemList = ({ products = [] }) => {
 
     return (
        
-        <div className="cards-group container ">
+        <div className="cards-group container">
             {products.map((products) => (
                 <Item
                     key={products.id}

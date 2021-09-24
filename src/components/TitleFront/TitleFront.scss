@@ -1,22 +1,24 @@
-
-
-.top_part{
+.top_part {
     display: flex;
-   justify-content: center;
-   background-color: white;
-   margin-top: 10px;
-    .top_part_h1{
+    justify-content: center;
+    background-color: white;
+    margin-top: 10px;
+    .top_part_h1 {
         display: inline;
-       
-       .top_part_title{
-        font-size: 1.5rem;
-        font-weight: 600;
-        padding-top: 30px;
-        letter-spacing: 2px;
-        color:black;
-       }
-       
-    
+
+        .top_part_title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding-top: 30px;
+            letter-spacing: 2px;
+            color: black;
+        
+        @media (max-width: 575px) {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
         @media (max-width: 767px) {
             text-align: center;
             font-size: 1rem;
@@ -24,9 +26,14 @@
             margin: 0.4rem 0;
         }
     }
-    .logo_white{
-        display: inline;
-        width:50px;
-        margin-top: 5px;
     }
+    .logo_white {
+        display: inline;
+        width: 50px;
+        margin-top: 5px;
+    
+    @media (max-width: 575px) {
+        width: 40px;
+        margin-top: 15px;
+    }}
 }
