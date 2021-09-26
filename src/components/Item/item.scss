@@ -1,19 +1,25 @@
 .card-img-top {
     padding: 0.2rem;
-    max-width: 250px;
+    
 }
 
 .card {
-    margin: 20px;
+    margin: 10px 0px 10px 0px;
     border: 1px;
     box-shadow: 5px 10px 18px #888888;
     border-radius: 5px;
-    width: 15rem;
+    width: 12rem;
     justify-content: space-around;
     
+    @media (max-width:575px ) {
+        justify-content: center;
+        align-items: center;
+    }
+   
     .card-body {
         text-align: center;
         align-items: center;
+       
         .btn-cart-view {
             margin-right: 0.5rem;
             margin-bottom: 0.5rem;
@@ -23,6 +29,7 @@
             border-radius: 0.2rem;
             border: none;
             align-items: center;
+            text-decoration: none;
             &:hover {
                 background-color: rgb(5, 91, 117);
             }
@@ -44,6 +51,8 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
+
+       
     }
     .btn-cart-card {
         margin-left: 0.5rem;
@@ -54,7 +63,10 @@
         border-radius: 0.2rem;
         border: none;
         align-items: center;
-        margin: 0;   
+        &:hover {
+            background-color:rgb(202, 1, 1);
+        }
+        
         .logo-cart-card {
             color:white;
             width: 1.5rem;

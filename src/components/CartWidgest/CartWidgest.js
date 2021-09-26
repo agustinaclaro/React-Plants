@@ -2,6 +2,7 @@ import {faCartArrowDown}from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CartContext } from '../../Context/CartContext'
 import {useContext} from 'react'
+import './Cartwidgest.scss'
 
 const CardWidgest =(props)=>{
     const {totalItems} = useContext(CartContext)
@@ -12,7 +13,7 @@ const CardWidgest =(props)=>{
                <span className="numberCountCart">{props.count}</span>
             </button>
             {
-            totalItems > 0 && <span className="numberCountCart">({totalItems})</span>
+            totalItems > 0 && <span className="numberCountCart"><button className="btn-cart-counter">{totalItems}</button></span>
             }
             
          </div>

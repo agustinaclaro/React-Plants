@@ -5,7 +5,7 @@ import { faFacebook, faWhatsapp,faInstagram} from '@fortawesome/free-brands-svg-
 const Footer = ()=>{
     return(
         <footer>
-        <div className="footer_global container">
+        <div className="footer_global container-fluid">
             <div className="footer_social_icons">
                    <ul className="footer_ul">
                         <li><a href="http://facebook.com" target="_blank">< FontAwesomeIcon  icon={faFacebook} className="logo_footer"/></a></li>

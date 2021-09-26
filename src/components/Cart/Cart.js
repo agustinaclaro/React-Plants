@@ -28,12 +28,9 @@ export const Cart = ( {setShowForm}) => {
                     <p className="total_Cart container">Total Compra: <span>${totalPriceCart()}</span></p>
                     <button className="checkOut-button" onClick={() => setShowForm(true)}>CHECKOUT</button>
                      </div>       
-
-         
                 </Fragment> 
 
                 ) : (
-                
                     <div className="cartEmptyContainer container">
                     <div className="col-12">    
                             <div className="empty-cart-content">

@@ -3,7 +3,8 @@ import './CategoryLink.scss'
 
 const CategoryLink = () => {
     return (
-        <ul className="category_list">
+    
+        <ul className="category_list ">
             <li className="category_item-link">
                 <NavLink to="/category/cactus">Cactus</NavLink>
             </li>

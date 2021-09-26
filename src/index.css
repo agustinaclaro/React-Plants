@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
   font-family:  'Open Sans', sans-serif;
@@ -6,7 +10,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100%;
   width: 100%;
-  max-width: 1140px;
   margin: auto;
 }
 

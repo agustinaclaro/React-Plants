@@ -1,0 +1,43 @@
+.containerMessage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+.textMessage{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left:auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+.imageMessage{
+    height:150px;
+    width:150px;
+    margin:20px;
+}
+.buttonHome{
+    padding: 10px;
+    width: 200px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #d68b21;
+    border: solid 1px;
+    border-color: #d68b21;
+    color: white;
+}
+.buttonHome:hover{
+    transition: .5s;
+    color: white;
+    border-color: #996111;
+    background-color: #996111;
+}
+@media screen and (max-width: 776px) {
+    .imageMessage{
+        height:100px;
+        width:100px;
+        margin:10px;
+    }
+}
