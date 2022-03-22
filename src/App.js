@@ -1,6 +1,6 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
-import './App.scss';
+import './App.css';
 import Navbar from './components/navbar/navbar';
 import ContainerProductDetail from './components/ContainerProductDetail/containerPd';
 import {
@@ -11,7 +11,7 @@ import {
 import { Inicio } from './components/Inicio/inicio';
 import { CartProvider } from './Context/CartContext';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import TitleFront from './components/TitleFront/TitleFront';
+import Nosotros from './components/nosotros/nosotros';
 import Footer from './components/Footer/footer';
 import {OrderBuy} from './components/Order/order'
 import { CartContainer } from './components/CartContainer/CartContainer';
@@ -24,7 +24,7 @@ function App() {
       <Router>
         <CartProvider>
           <Navbar />
-          <TitleFront/>
+         
           <Switch>
             <Route exact path='/'>
               <Inicio />
@@ -42,8 +42,12 @@ function App() {
             <Route path="/products">
               <ItemListContainer />
             </Route>
+            <Route  path="/nosotros">
+              <Nosotros/>
+            </Route>
             <Route component={Error}>
             </Route>
+          
 
           </Switch>
           <Footer/>

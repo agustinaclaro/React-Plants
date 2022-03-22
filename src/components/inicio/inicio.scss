@@ -1,16 +1,22 @@
-.main-site{
-    .img{
-        width: 100%;
-    }
+.main_site_div {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
+    background-image:url(../../Assets/inicio_back.jpg);
+    width: auto;
+    height: 100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.btn_go_products{
-    color:whitesmoke;
+
+.btn_go_products {
+    color: whitesmoke;
     border-color: rgb(41, 162, 99);
     font-weight: 400;
     margin-bottom: 10px;
     margin-top: 10px;
     border-radius: 0.3rem;
-    background-color:rgb(41, 162, 99);
+    background-color: rgb(41, 162, 99);
     padding: 2px;
-  
 }

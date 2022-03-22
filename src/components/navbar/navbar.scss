@@ -2,29 +2,40 @@
 
 .navbar {
     display: flex;
-    background-color: rgb(54, 121, 86);
-    color: #91c788;
+    background-color:transparent;
+    color: #025918;
      margin-left: 0;
      margin-right: 0;
     height: 60px;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    
+    
+   
+    .navbar_logo{
+        width: 2rem;
+        height: 2rem;
+    }
 
     .ul-links {
         display: flex;
         list-style-type: none;
-        align-items: center;
-        padding: 5 0 0 0;
+        align-items: flex-end;
+       
         .item-link a {
+            font-family: 'Montserrat', sans-serif;
             padding-bottom: 5px;
             margin: 0;
             font-weight: 500;
             font-size: 1rem;
-            color: #f2f8f1;
+            color: rgb(29, 143, 77);
             justify-content: center;
             letter-spacing: 2px;
             text-decoration: none;
             @media (max-width: 575px) {
                font-size: 0.9rem;
                letter-spacing: 1px;
+               padding: 0;
              }
         }
     }
@@ -48,7 +59,7 @@
     }
 
     .btn-cart {
-        background-color: rgb(41, 162, 99);
+        background-color: whitesmoke;
         height: 2.2rem;
         width: 2.2rem;
         border-radius: 0.2rem;
@@ -60,6 +71,6 @@
         height: 1.4rem;
         padding-top: 2px;
         margin: 0;
-        color: whitesmoke;
+        color: rgb(41, 162, 99);
     }
 }

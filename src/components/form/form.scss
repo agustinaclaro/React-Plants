@@ -9,3 +9,26 @@
     margin: 0.5rem;
     border: none;
 }
+.cart_form{
+    height: calc(100vh - 200px);
+    margin-top: 20px;
+}
+.cart_form_div{
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+   
+    form{
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+        input{
+            margin: 10px 0;
+            width: 50%;
+            border: none;
+            border-bottom: solid black 1px;
+
+            
+        }
+    }  
+}

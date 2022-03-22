@@ -5,6 +5,7 @@
     margin-top: 10px;
     .top_part_h1 {
         display: inline;
+        align-items: center;
 
         .top_part_title {
             font-size: 1.5rem;
@@ -12,6 +13,7 @@
             padding-top: 30px;
             letter-spacing: 2px;
             color: black;
+           
         
         @media (max-width: 575px) {
             font-size: 0.9rem;

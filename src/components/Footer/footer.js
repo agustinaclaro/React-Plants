@@ -13,7 +13,6 @@ const Footer = ()=>{
                         <li><a href="http://whatsapp.com" target="_blank">< FontAwesomeIcon  icon={faWhatsapp} className="logo_footer"/></a></li>
                     </ul>  
             </div>
-            <p className="contacto_redes">Contactanos en nuestras redes sociales</p>
             <p className="copyright"> &copy; Copyright 2021- Coderhouse &reg; camada14630</p>
        
         </div>
