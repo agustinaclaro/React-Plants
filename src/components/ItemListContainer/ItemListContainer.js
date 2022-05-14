@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import './ItemListContainer.scss';
 import { useParams } from "react-router-dom"
 import CategoryLink from '../CategoryLink/CategoryLink'
 import {getFirestore} from '../../firebase/index'

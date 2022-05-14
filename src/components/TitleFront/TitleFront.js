@@ -7,7 +7,7 @@ const TitleFont = () => {
         <div className="top_part" >
 
             <div className="top_part_h1">
-                <h1 className="top_part_title">PEQUEÑO RESPIRO</h1>
+                <h1 className="top_part_title">RESPIRO</h1>
             </div>
             <div className="top_part_img">
 
@@ -19,4 +19,4 @@ const TitleFont = () => {
 
     )
 }
-export default TitleFont;
+export default TitleFont; 

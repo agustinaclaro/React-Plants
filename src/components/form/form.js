@@ -113,13 +113,12 @@ export const Form = () => {
 
     return (
         <Fragment>
-        <div className="cart-form-container ">  
-            <div className="cart-total">            
-                <h5>Total: ${totalPriceCart()} </h5> 
-            </div>
+        <div className="cart_form container ">  
+        
             <div className="text-cart-form">
                 <p>Completá tus datos para confirmar tu compra</p>
             </div>
+            <div className="cart_form_div">
             <form className="form">
                
                  {formFields.map(({ id, label, value, type, placeholder }) => (
@@ -129,6 +128,10 @@ export const Form = () => {
                   ) )} 
                     
             </form> 
+            </div>
+            <div className="cart-total">            
+                <h5>Total: ${totalPriceCart()} </h5> 
+            </div>
             <div className="button-finish-container">
            
             <Link to="/cartCheckOut">
