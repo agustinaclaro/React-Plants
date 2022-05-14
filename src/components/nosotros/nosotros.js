@@ -8,7 +8,7 @@ export const Nosotros = () => {
         <div className="nosotros_div">
    
                 <div className="nosotros_text">
-                    <p>Hola, mi nombre es Agustina. <br></br> Desarrolle este proyecto durante el curso se Coder de React. <br></br> Para la realizacion del mismo utilizamos hooks, reac-router-dom, Sass, Boostrap </p>
+                    <p>Hola, mi nombre es Agustina. <br></br> Desarrolle este proyecto durante el curso de Coder de React. <br></br> Para la realizacion del mismo utilizamos hooks, reac-router-dom, Sass, Boostrap </p>
                     <p></p>
                 </div>
                 <div>
