@@ -18,16 +18,17 @@ import { CartContainer } from './components/CartContainer/CartContainer';
 import {Error} from './components/Error/error'
 
 function App() {
+
+  
  
   return (
     <div className="App">
       <Router>
         <CartProvider>
           <Navbar />
-         
           <Switch>
             <Route exact path='/'>
-              <Inicio />
+              <Inicio/>
             </Route>
             <Route path="/cartCheckout" component={OrderBuy} />
             <Route path='/cart'>

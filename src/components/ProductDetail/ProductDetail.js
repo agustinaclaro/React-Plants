@@ -20,7 +20,7 @@ const ProductDetail = ({ product }) => {
                     <button className="buttonAdd" onClick={() => { addItem(product, 1) }}   > Agregar al carrito </button>
                 </div>
                 <div className="buttoBackContainer">
-                    <button className="buttonAdd" > seguir comprando </button>
+                    <button className="buttonAdd"> seguir comprando </button>
                 </div>
             </div>
 

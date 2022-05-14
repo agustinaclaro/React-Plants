@@ -27,7 +27,7 @@ const Item = ({item}) => {
   }, [quantity])
     
     return (
-        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4 col-xl-4">
             <div className="card">
             <Link to= {`/products/${item.id}`}>
                 <img src={item.imgUrl} onClick={item.onImageClick} className="card-img-top" alt="..." />

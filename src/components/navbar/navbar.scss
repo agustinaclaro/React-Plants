@@ -8,10 +8,7 @@
      margin-right: 0;
     height: 60px;
     font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    
-    
-   
+    position: absolute;  
     .navbar_logo{
         width: 2rem;
         height: 2rem;
@@ -20,8 +17,7 @@
     .ul-links {
         display: flex;
         list-style-type: none;
-        align-items: flex-end;
-       
+        align-items: flex-end; 
         .item-link a {
             font-family: 'Montserrat', sans-serif;
             padding-bottom: 5px;
@@ -33,9 +29,9 @@
             letter-spacing: 2px;
             text-decoration: none;
             @media (max-width: 575px) {
-               font-size: 0.9rem;
+               font-size: 0.5rem;
                letter-spacing: 1px;
-               padding: 0;
+               padding:0;
              }
         }
     }
